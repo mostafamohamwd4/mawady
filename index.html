@@ -1,154 +1,255 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>موادي</title>
+<title>Mawady · Course Materials</title>
+<meta name="description" content="Lectures, sections, sheets, exams and study packs — every course file in one place.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237dd3fc'/%3E%3Cstop offset='1' stop-color='%23c4b5fd'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' text-anchor='middle' fill='%230e1117'%3EM%3C/text%3E%3C/svg%3E">
 <style>
 :root{
-  --bg:#0e1117;--surface:#161b24;--surface-raised:#1d2330;--line:#262e3c;--track:#232a36;
+  --bg:#0e1117;--bg-2:#11151d;--surface:#161b24;--surface-raised:#1d2330;--line:#262e3c;--line-2:#303a4b;--track:#232a36;
   --ink:#e6e8ee;--ink-strong:#fff;--ink-soft:#c9cfdb;--muted:#9aa3b5;--faint:#7c8598;
   --accent:#7dd3fc;--accent-2:#c4b5fd;--accent-3:#fcd34d;--on-accent:#0e1117;
-  --sans:"Rubik","Noto Sans Arabic",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  --ok:#4ade80;--danger:#fca5a5;--danger-bg:rgba(248,113,113,.12);
+  --sans:"Rubik",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  --r-sm:8px;--r-md:12px;--r-lg:16px;--r-xl:20px;
 }
 *{box-sizing:border-box}
-html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans)}
+html{scroll-behavior:smooth}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
 body{min-height:100vh;display:flex;flex-direction:column}
-button{font-family:inherit}
+button,input,select{font-family:inherit;font-size:inherit;color:inherit}
 a{color:inherit}
-.container{max-width:1080px;margin:0 auto;padding:0 24px;width:100%}
+svg{flex:none}
+.container{max-width:1160px;margin:0 auto;padding:0 28px;width:100%}
+.mono{font-family:var(--mono)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line-2);background:var(--surface-raised);color:var(--ink);border-radius:10px;padding:10px 16px;font-size:14px;font-weight:500;cursor:pointer;text-decoration:none;transition:border-color .15s,background .15s,transform .1s;white-space:nowrap}
+.btn:hover{border-color:var(--muted)}
+.btn:active{transform:translateY(1px)}
+.btn.primary{background:var(--ink-strong);color:var(--on-accent);border-color:transparent}
+.btn.primary:hover{background:#dfe5ee}
+.btn.accent{background:var(--c,var(--accent));color:var(--on-accent);border-color:transparent}
+.btn.ghost{background:transparent}
+.btn.danger{background:var(--danger-bg);color:var(--danger);border-color:rgba(252,165,165,.3)}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.btn.sm{padding:7px 12px;font-size:13px;border-radius:8px}
 
 /* nav */
-nav.top{position:sticky;top:0;z-index:5;background:rgba(14,17,23,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav.top .container{display:flex;align-items:center;gap:20px;height:62px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink-strong);font-weight:700;font-size:19px}
-.brand .mark{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;color:var(--on-accent);font-family:var(--mono);font-size:13px;font-weight:700}
-.links{display:flex;gap:4px;flex:1}
-.links a{text-decoration:none;color:var(--muted);font-size:14.5px;padding:8px 14px;border-radius:999px;transition:background .15s,color .15s}
+nav.top{position:sticky;top:0;z-index:20;background:rgba(14,17,23,.82);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+nav.top .container{display:flex;align-items:center;gap:24px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink-strong);font-weight:700;font-size:18px;letter-spacing:-.01em}
+.brand .mark{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;color:var(--on-accent);font-family:var(--mono);font-size:14px;font-weight:600}
+.brand small{font-weight:400;color:var(--faint);font-size:13px;margin-left:2px}
+.links{display:flex;gap:2px;flex:1;min-width:0}
+.links a{text-decoration:none;color:var(--muted);font-size:14px;padding:8px 12px;border-radius:8px;transition:background .15s,color .15s;display:flex;align-items:center;gap:8px}
 .links a:hover{color:var(--ink);background:var(--surface)}
 .links a.on{color:var(--ink-strong);background:var(--surface-raised)}
-.links a .dot{display:inline-block;width:7px;height:7px;border-radius:2px;background:var(--c);margin-inline-end:7px;vertical-align:middle}
-.navsearch{position:relative;width:250px}
-.navsearch input{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:999px;color:var(--ink);font:14px var(--sans);padding:9px 16px;outline:none}
+.links a .dot{width:7px;height:7px;border-radius:2px;background:var(--c)}
+.navsearch{position:relative;width:260px}
+.navsearch svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--faint)}
+.navsearch input{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:9px 40px 9px 36px;font-size:14px;outline:none;transition:border-color .15s}
 .navsearch input:focus{border-color:var(--muted)}
 .navsearch input::placeholder{color:var(--faint)}
+.navsearch kbd{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:11px;color:var(--faint);border:1px solid var(--line-2);border-radius:5px;padding:1px 6px}
+.adminbtn{display:flex;align-items:center;gap:6px;text-decoration:none;font-size:13px;color:var(--muted);padding:8px 10px;border-radius:8px}
+.adminbtn:hover{background:var(--surface);color:var(--ink)}
+.adminbtn.on{color:var(--ok)}
 
 main{flex:1}
 .view{display:none}
-.view.on{display:block}
+.view.on{display:block;animation:fade .2s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 
 /* home */
-.hero{padding:64px 0 36px}
-.hero .path{font-family:var(--mono);font-size:12px;color:var(--accent)}
-.hero h1{margin:10px 0 10px;font-size:46px;line-height:1.15;color:var(--ink-strong);font-weight:700}
+.hero{position:relative;padding:88px 0 56px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-60px 0 auto auto;width:640px;height:520px;background:radial-gradient(closest-side,rgba(125,211,252,.14),transparent),radial-gradient(closest-side at 70% 60%,rgba(196,181,253,.12),transparent);pointer-events:none}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--accent);border:1px solid rgba(125,211,252,.25);background:rgba(125,211,252,.06);border-radius:999px;padding:5px 12px}
+.eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px rgba(74,222,128,.18)}
+.hero h1{position:relative;margin:20px 0 16px;font-size:56px;line-height:1.05;letter-spacing:-.03em;color:var(--ink-strong);font-weight:700;max-width:760px}
 .hero h1 span{background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{margin:0;color:var(--muted);font-size:16px;line-height:1.7;max-width:560px}
-.stats{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}
-.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 18px;min-width:120px}
-.stat b{display:block;font-family:var(--mono);font-size:22px;color:var(--ink-strong);font-weight:700}
+.hero p{position:relative;margin:0;color:var(--muted);font-size:18px;line-height:1.6;max-width:600px}
+.hero .ctas{position:relative;display:flex;gap:10px;margin-top:30px;flex-wrap:wrap}
+.stats{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:52px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+.stat{background:var(--bg-2);padding:20px 22px}
+.stat b{display:block;font-family:var(--mono);font-size:28px;color:var(--ink-strong);font-weight:600;letter-spacing:-.02em}
 .stat span{font-size:13px;color:var(--muted)}
-.sec-title{display:flex;align-items:baseline;justify-content:space-between;margin:40px 0 14px}
-.sec-title h2{margin:0;font-size:20px;color:var(--ink-strong);font-weight:500}
-.sec-title span{font-family:var(--mono);font-size:12px;color:var(--faint)}
-.courses{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
-.ccard{position:relative;display:flex;flex-direction:column;gap:14px;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px 22px 20px;overflow:hidden;transition:border-color .15s,transform .15s}
-.ccard::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--c)}
-.ccard:hover{border-color:var(--c);transform:translateY(-2px)}
-.ccard .code{font-family:var(--mono);font-size:12px;color:var(--c)}
-.ccard h3{margin:4px 0 0;font-size:21px;line-height:1.35;color:var(--ink-strong);direction:ltr;text-align:right}
+.sec-title{display:flex;align-items:end;justify-content:space-between;gap:16px;margin:56px 0 18px}
+.sec-title h2{margin:0;font-size:22px;color:var(--ink-strong);font-weight:600;letter-spacing:-.01em}
+.sec-title p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.sec-title .mono{font-size:12px;color:var(--faint)}
+.courses{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.ccard{position:relative;display:flex;flex-direction:column;gap:18px;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-xl);padding:24px;overflow:hidden;transition:border-color .2s,transform .2s,box-shadow .2s}
+.ccard::after{content:"";position:absolute;inset:auto -60px -80px auto;width:220px;height:220px;background:radial-gradient(closest-side,color-mix(in srgb,var(--c) 18%,transparent),transparent);pointer-events:none}
+.ccard:hover{border-color:color-mix(in srgb,var(--c) 60%,var(--line));transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(0,0,0,.6)}
+.ccard .top{display:flex;align-items:center;justify-content:space-between}
+.ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 14%,transparent);color:var(--c);border:1px solid color-mix(in srgb,var(--c) 30%,transparent)}
+.pill{font-family:var(--mono);font-size:11.5px;color:var(--c);border:1px solid color-mix(in srgb,var(--c) 30%,transparent);border-radius:999px;padding:3px 10px}
+.ccard h3{margin:0;font-size:21px;line-height:1.3;color:var(--ink-strong);font-weight:600;letter-spacing:-.01em}
+.ccard .meta{display:flex;gap:16px;color:var(--muted);font-size:13.5px}
+.ccard .meta b{color:var(--ink);font-weight:500}
 .ccard .chips{display:flex;gap:6px;flex-wrap:wrap}
-.ccard .chips span{font-size:12.5px;color:var(--ink-soft);background:var(--surface-raised);border-radius:999px;padding:5px 11px}
-.ccard .go{margin-top:auto;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13.5px}
-.ccard .go b{color:var(--c);font-weight:500}
-.ccard.soon{opacity:.55;cursor:default}
-.ccard.soon:hover{transform:none;border-color:var(--line)}
-.recent{display:flex;gap:10px;flex-wrap:wrap}
-.recent button{display:flex;flex-direction:column;align-items:flex-start;gap:4px;background:var(--surface);border:1px solid var(--line);color:var(--ink);border-radius:14px;padding:12px 16px;cursor:pointer;text-align:right;min-width:200px}
-.recent button:hover{border-color:var(--c)}
-.recent button small{font-family:var(--mono);font-size:11px;color:var(--c)}
+.ccard .chips span{font-size:12px;color:var(--ink-soft);background:var(--surface-raised);border-radius:999px;padding:4px 10px}
+.ccard .go{margin-top:auto;display:flex;align-items:center;gap:6px;color:var(--c);font-size:14px;font-weight:500}
+.ccard:hover .go svg{transform:translateX(3px)}
+.ccard .go svg{transition:transform .2s}
+
+/* file cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.file{position:relative;display:flex;gap:14px;align-items:flex-start;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:16px;cursor:pointer;transition:border-color .15s,background .15s,transform .15s}
+.file:hover,.file:focus-visible{border-color:color-mix(in srgb,var(--c) 55%,var(--line));background:var(--surface-raised);outline:none;transform:translateY(-1px)}
+.fico{width:40px;height:48px;border-radius:8px;flex:none;position:relative;background:color-mix(in srgb,var(--c) 12%,var(--surface-raised));border:1px solid color-mix(in srgb,var(--c) 28%,transparent);display:grid;place-items:end center;padding-bottom:6px}
+.fico::before{content:"";position:absolute;top:-1px;right:-1px;width:12px;height:12px;background:var(--bg);border-left:1px solid color-mix(in srgb,var(--c) 28%,transparent);border-bottom:1px solid color-mix(in srgb,var(--c) 28%,transparent);border-bottom-left-radius:4px}
+.fico span{font-family:var(--mono);font-size:9.5px;font-weight:600;color:var(--c);letter-spacing:.04em}
+.fbody{min-width:0;flex:1;display:flex;flex-direction:column;gap:6px}
+.fbody .ctx{font-family:var(--mono);font-size:11px;color:var(--c)}
+.fbody .t{font-size:14.5px;line-height:1.4;font-weight:500;color:var(--ink-strong);word-break:break-word}
+.fbody .m{font-family:var(--mono);font-size:11.5px;color:var(--muted);display:flex;gap:12px}
+.file .new{position:absolute;top:10px;right:10px;font-family:var(--mono);font-size:10px;color:var(--ok);border:1px solid rgba(74,222,128,.35);border-radius:999px;padding:1px 7px}
+.del{position:absolute;top:8px;right:8px;width:30px;height:30px;border-radius:8px;border:1px solid transparent;background:transparent;color:var(--faint);display:none;place-items:center;cursor:pointer}
+body.admin .del{display:grid}
+body.admin .file{padding-right:44px}
+body.admin .file .new{right:44px}
+.del:hover{color:var(--danger);background:var(--danger-bg);border-color:rgba(252,165,165,.3)}
+.admin-only{display:none !important}
+body.admin .admin-only{display:inline-flex !important}
+
+/* recent */
+.recent{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
 
 /* course page */
-.chead{padding:44px 0 6px}
-.crumb{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.chero{position:relative;padding:48px 0 32px;border-bottom:1px solid var(--line);overflow:hidden}
+.chero::before{content:"";position:absolute;inset:-160px auto auto -120px;width:640px;height:420px;background:radial-gradient(closest-side,color-mix(in srgb,var(--c) 16%,transparent),transparent);pointer-events:none}
+.crumb{position:relative;font-family:var(--mono);font-size:12px;color:var(--faint)}
 .crumb a{text-decoration:none;color:var(--muted)}
 .crumb a:hover{color:var(--ink)}
 .crumb b{color:var(--c);font-weight:400}
-.chead h1{margin:10px 0 6px;font-size:38px;line-height:1.2;color:var(--ink-strong);direction:ltr;text-align:right}
-.chead p{margin:0;color:var(--muted);font-size:14.5px}
-.subnav{position:sticky;top:62px;z-index:4;background:rgba(14,17,23,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);margin-top:22px;border-bottom:1px solid var(--line)}
+.chead{position:relative;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-top:18px;flex-wrap:wrap}
+.chead .l{display:flex;gap:18px;align-items:center}
+.chead .ico{width:56px;height:56px;border-radius:16px}
+.chead h1{margin:0 0 6px;font-size:36px;line-height:1.15;letter-spacing:-.02em;color:var(--ink-strong)}
+.chead p{margin:0;color:var(--muted);font-size:14.5px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.subnav{position:sticky;top:64px;z-index:10;background:rgba(14,17,23,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .subnav .container{display:flex;gap:6px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
 .subnav .container::-webkit-scrollbar{display:none}
-.subnav button{flex:none;background:var(--surface);border:1px solid var(--line);color:var(--ink-soft);border-radius:999px;padding:8px 14px;font-size:13.5px;cursor:pointer}
-.subnav button:hover{border-color:var(--c);color:var(--ink)}
-.subnav button i{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--c);margin-inline-start:6px}
-.group{padding-top:30px;scroll-margin-top:130px}
-.group h3{font-size:16px;font-weight:500;color:var(--ink-strong);margin:0 0 12px;display:flex;align-items:center;gap:9px}
-.group h3::before{content:"";width:9px;height:9px;border-radius:3px;background:var(--c)}
-.group h3 em{font-style:normal;font-family:var(--mono);font-size:11.5px;color:var(--faint);font-weight:400}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
-.file{display:flex;flex-direction:column;gap:10px;text-align:right;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px 18px;cursor:pointer;color:var(--ink);transition:border-color .15s,background .15s;min-height:92px}
-.file:hover,.file:focus-visible{border-color:var(--c);background:var(--surface-raised);outline:none}
-.file .t{font-size:15px;line-height:1.45;font-weight:500;color:var(--ink-strong)}
-.file .m{margin-top:auto;font-family:var(--mono);font-size:11.5px;color:var(--muted);display:flex;gap:10px;direction:ltr;justify-content:flex-end}
-.file .m b{color:var(--c);font-weight:400}
-.file .cname{font-family:var(--mono);font-size:11px;color:var(--c)}
+.subnav button{flex:none;background:transparent;border:1px solid var(--line);color:var(--ink-soft);border-radius:999px;padding:7px 14px;font-size:13px;cursor:pointer;transition:all .15s}
+.subnav button:hover,.subnav button.on{border-color:var(--c);color:var(--ink-strong);background:color-mix(in srgb,var(--c) 10%,transparent)}
+.subnav button i{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--c);margin-left:6px}
+.group{padding-top:36px;scroll-margin-top:136px}
+.ghead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.ghead h3{margin:0;font-size:17px;font-weight:600;color:var(--ink-strong);display:flex;align-items:center;gap:10px}
+.ghead h3::before{content:"";width:4px;height:18px;border-radius:2px;background:var(--c)}
+.ghead h3 em{font-style:normal;font-family:var(--mono);font-size:12px;color:var(--faint);font-weight:400}
 
-/* search page */
-.shead{padding:44px 0 10px}
-.shead h1{margin:0;font-size:28px;color:var(--ink-strong)}
-.shead p{color:var(--muted);margin:6px 0 0}
-.empty{color:var(--muted);padding:40px 0;text-align:center}
+/* search / admin pages */
+.phead{padding:48px 0 20px}
+.phead h1{margin:0;font-size:30px;color:var(--ink-strong);letter-spacing:-.02em}
+.phead p{color:var(--muted);margin:8px 0 0}
+.empty{color:var(--muted);padding:56px 0;text-align:center;border:1px dashed var(--line);border-radius:var(--r-lg)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-xl);padding:24px;margin-bottom:16px}
+.panel h3{margin:0 0 6px;font-size:16px;color:var(--ink-strong)}
+.panel p{margin:0 0 14px;color:var(--muted);font-size:14px;line-height:1.6}
+.steps{margin:0;padding-left:20px;color:var(--ink-soft);font-size:14px;line-height:1.9}
+.steps code,.panel code{font-family:var(--mono);font-size:12.5px;background:var(--surface-raised);border:1px solid var(--line);border-radius:5px;padding:1px 6px;color:var(--ink)}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.field label{font-size:13px;color:var(--ink-soft);font-weight:500}
+.field input,.field select{background:var(--bg-2);border:1px solid var(--line-2);border-radius:10px;padding:11px 13px;font-size:14px;outline:none;width:100%}
+.field input:focus,.field select:focus{border-color:var(--muted)}
+.field small{color:var(--faint);font-size:12px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.status-line{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);margin-top:4px}
+.status-line i{width:8px;height:8px;border-radius:50%;background:var(--faint)}
+.status-line.ok i{background:var(--ok)}
+.status-line.err{color:var(--danger)}
+.status-line.err i{background:var(--danger)}
 
-footer{margin-top:64px;border-top:1px solid var(--line)}
-footer .container{display:flex;justify-content:space-between;padding-top:18px;padding-bottom:24px;font-family:var(--mono);font-size:11px;color:var(--faint);direction:ltr}
+footer{margin-top:80px;border-top:1px solid var(--line)}
+footer .container{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:24px;padding-bottom:32px;font-size:13px;color:var(--faint);flex-wrap:wrap}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--ink)}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:40;background:rgba(5,7,10,.7);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.mbox{width:100%;max-width:520px;background:var(--surface);border:1px solid var(--line-2);border-radius:var(--r-xl);padding:26px;box-shadow:0 30px 80px -20px rgba(0,0,0,.8);animation:fade .15s ease}
+.mbox h3{margin:0 0 4px;font-size:19px;color:var(--ink-strong)}
+.mbox > p{margin:0 0 20px;color:var(--muted);font-size:14px}
+.mactions{display:flex;justify-content:flex-end;gap:10px;margin-top:8px}
+.drop{display:block;border:1.5px dashed var(--line-2);border-radius:var(--r-lg);padding:22px;text-align:center;color:var(--muted);font-size:14px;cursor:pointer;transition:border-color .15s,background .15s;margin-bottom:14px}
+.drop:hover,.drop.over{border-color:var(--accent);background:rgba(125,211,252,.05)}
+.drop b{color:var(--ink)}
+.drop input{display:none}
+.bar{height:6px;border-radius:999px;background:var(--track);overflow:hidden;margin:6px 0 14px;display:none}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-2));transition:width .25s}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);opacity:0;z-index:60;background:var(--surface-raised);border:1px solid var(--line-2);color:var(--ink);border-radius:12px;padding:12px 18px;font-size:14px;box-shadow:0 12px 30px rgba(0,0,0,.5);transition:all .25s;pointer-events:none;max-width:90vw}
+.toast.show{opacity:1;transform:translateX(-50%)}
+.toast.ok{border-color:rgba(74,222,128,.4)}
+.toast.err{border-color:rgba(252,165,165,.4);color:var(--danger)}
 
 /* viewer */
-.viewer{position:fixed;inset:0;background:var(--bg);display:none;flex-direction:column;z-index:10}
+.viewer{position:fixed;inset:0;background:var(--bg);display:none;flex-direction:column;z-index:30}
 .viewer.open{display:flex}
-.vbar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--surface)}
+.vbar{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--line);background:var(--surface)}
 .vbar .vt{flex:1;min-width:0}
 .vbar .vt .path{font-family:var(--mono);font-size:11px;color:var(--c)}
-.vbar .vt div:last-child{font-size:15px;color:var(--ink-strong);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.vbtn{background:var(--surface-raised);border:1px solid var(--line);color:var(--ink);border-radius:10px;min-width:38px;height:38px;padding:0 10px;font-size:15px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+.vbar .vt div:last-child{font-size:15px;color:var(--ink-strong);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vbtn{background:var(--surface-raised);border:1px solid var(--line);color:var(--ink);border-radius:10px;min-width:38px;height:38px;padding:0 10px;font-size:15px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;text-decoration:none}
 .vbtn:hover{border-color:var(--muted)}
-.pg{font-family:var(--mono);font-size:12px;color:var(--muted);direction:ltr;min-width:64px;text-align:center}
-.pages{flex:1;overflow:auto;padding:18px 10px 40px;display:flex;flex-direction:column;align-items:center;gap:14px}
-.page{background:#fff;border-radius:6px;box-shadow:0 2px 14px rgba(0,0,0,.4)}
+.pg{font-family:var(--mono);font-size:12px;color:var(--muted);min-width:70px;text-align:center}
+.pages{flex:1;overflow:auto;padding:20px 10px 48px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.page{background:#fff;border-radius:6px;box-shadow:0 2px 16px rgba(0,0,0,.45)}
 .page canvas{display:block;width:100%;height:100%;border-radius:6px}
-.status{color:var(--muted);font-size:14px;margin-top:40px;text-align:center}
-.prog{width:200px;height:6px;border-radius:999px;background:var(--track);margin:12px auto 0;overflow:hidden}
+.vstatus{color:var(--muted);font-size:14px;margin-top:60px;text-align:center}
+.prog{width:220px;height:6px;border-radius:999px;background:var(--track);margin:14px auto 0;overflow:hidden}
 .prog i{display:block;height:100%;width:0;background:var(--c);transition:width .2s}
 
+@media (max-width:900px){
+  .navsearch{width:200px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
 @media (max-width:760px){
-  nav.top .container{height:auto;flex-wrap:wrap;gap:10px;padding-top:10px;padding-bottom:10px}
-  .links{order:3;flex-basis:100%;overflow-x:auto}
-  .navsearch{flex:1;width:auto}
-  .subnav{top:108px}
-  .group{scroll-margin-top:170px}
-}
-@media (max-width:600px){
-  .container{padding:0 16px}
-  .hero{padding:40px 0 24px}
-  .hero h1{font-size:34px}
+  nav.top .container{height:auto;flex-wrap:wrap;gap:10px;padding-top:12px;padding-bottom:10px}
+  .brand small{display:none}
+  .navsearch{order:2;flex:1;width:auto}
+  .navsearch kbd{display:none}
+  .links{order:3;flex-basis:100%;overflow-x:auto;scrollbar-width:none}
+  .adminbtn{order:1;margin-left:auto}
+  .subnav{top:112px}
+  .group{scroll-margin-top:180px}
+  .hero{padding:52px 0 36px}
+  .hero h1{font-size:38px}
+  .hero p{font-size:16px}
   .chead h1{font-size:28px}
-  .grid{grid-template-columns:1fr 1fr}
-  .file{padding:14px;min-height:84px}
-  .file .t{font-size:14px}
-  .hide-sm{display:none}
-  .recent button{min-width:0;flex:1 1 100%}
+  .row{grid-template-columns:1fr}
 }
-@media (max-width:380px){.grid{grid-template-columns:1fr}}
+@media (max-width:560px){
+  .container{padding:0 16px}
+  .chead .ico{display:none}
+  .grid,.recent{grid-template-columns:1fr}
+  .courses{grid-template-columns:1fr}
+  .hide-sm{display:none !important}
+  .stat{padding:16px}
+  .stat b{font-size:22px}
+}
 </style>
 </head>
 <body>
 <nav class="top">
   <div class="container">
-    <a class="brand" href="#home"><span class="mark">M</span>موادي</a>
+    <a class="brand" href="#home"><span class="mark">M</span>Mawady<small>/ course materials</small></a>
     <div class="links" id="links"></div>
-    <div class="navsearch"><input id="q" type="search" placeholder="دوّر على ملف…" autocomplete="off"></div>
+    <div class="navsearch">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search files…" autocomplete="off"><kbd>/</kbd>
+    </div>
+    <a class="adminbtn" id="adminbtn" href="#admin" title="Manage files">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span class="hide-sm">Manage</span>
+    </a>
   </div>
 </nav>
 
@@ -156,45 +257,96 @@ footer .container{display:flex;justify-content:space-between;padding-top:18px;pa
   <section class="view" id="v-home">
     <div class="container">
       <div class="hero">
-        <div class="path">FALL 2026 / home</div>
-        <h1>كل موادك<br><span>في مكان واحد</span></h1>
-        <p>المحاضرات والسكاشن والشيتات والملفات اللي اتعملت في الشاتات. افتح أي ملف من اللاب أو الموبايل من غير ما تدوّر على الجهاز.</p>
+        <span class="eyebrow"><i></i>FALL 2026 · STUDY HUB</span>
+        <h1>Every lecture, sheet and exam.<br><span>One link.</span></h1>
+        <p>Lectures, sections, solved sheets, past exams and study packs for every course — organised, searchable, and readable on any device.</p>
+        <div class="ctas">
+          <a class="btn primary" href="#courses-list" id="browseBtn">Browse courses
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <button class="btn" id="searchBtn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Search files</button>
+        </div>
         <div class="stats" id="stats"></div>
       </div>
       <div id="recentWrap" style="display:none">
-        <div class="sec-title"><h2>كمّل من حيث وقفت</h2><span>recent</span></div>
+        <div class="sec-title"><div><h2>Continue reading</h2><p>Files you opened recently on this device.</p></div><span class="mono">RECENT</span></div>
         <div class="recent" id="recent"></div>
       </div>
-      <div class="sec-title"><h2>المواد</h2><span>courses</span></div>
+      <div id="latestWrap" style="display:none">
+        <div class="sec-title"><div><h2>Recently added</h2><p>The newest files uploaded to the hub.</p></div><span class="mono">NEW</span></div>
+        <div class="grid" id="latest"></div>
+      </div>
+      <div class="sec-title" id="courses-list"><div><h2>Courses</h2><p>Pick a course to see all of its materials.</p></div><span class="mono">COURSES</span></div>
       <div class="courses" id="courses"></div>
     </div>
   </section>
 
   <section class="view" id="v-course">
-    <div class="container chead" id="chead"></div>
+    <div class="chero"><div class="container" id="chead"></div></div>
     <div class="subnav"><div class="container" id="subnav"></div></div>
     <div class="container" id="cbody"></div>
   </section>
 
   <section class="view" id="v-search">
     <div class="container">
-      <div class="shead"><h1 id="stitle"></h1><p id="ssub"></p></div>
+      <div class="phead"><h1 id="stitle"></h1><p id="ssub"></p></div>
       <div class="grid" id="sres"></div>
-      <div class="empty" id="sempty" style="display:none">مفيش ملف بالاسم ده.</div>
+      <div class="empty" id="sempty" style="display:none">No files match your search.</div>
+    </div>
+  </section>
+
+  <section class="view" id="v-admin">
+    <div class="container" style="max-width:760px">
+      <div class="phead"><h1>Manage files</h1><p>Connect your GitHub account to add and delete PDFs. Only you see these controls — visitors just browse.</p></div>
+      <div class="panel" id="adminPanel"></div>
     </div>
   </section>
 </main>
 
-<footer><div class="container"><span>موادي · course materials</span><span id="total"></span></div></footer>
+<footer><div class="container">
+  <span>© <span id="yr"></span> Mawady · Course materials</span>
+  <span id="total" class="mono"></span>
+  <span><a href="#home">Home</a> · <a href="#admin">Manage</a></span>
+</div></footer>
+
+<!-- add modal -->
+<div class="modal" id="addModal" role="dialog" aria-modal="true">
+  <div class="mbox">
+    <h3>Add a PDF</h3>
+    <p>The file is uploaded to your site and goes live for everyone in about a minute.</p>
+    <label class="drop" id="drop"><input type="file" id="fileIn" accept="application/pdf,.pdf"><span id="dropText"><b>Choose a PDF</b> or drop it here<br><small>Up to 95 MB</small></span></label>
+    <div class="field"><label for="aTitle">Title</label><input id="aTitle" placeholder="e.g. Lecture 7 · Ch3"></div>
+    <div class="row">
+      <div class="field"><label for="aCourse">Course</label><select id="aCourse"></select></div>
+      <div class="field"><label for="aGroup">Section</label><select id="aGroup"></select></div>
+    </div>
+    <div class="field" id="newGroupField" style="display:none"><label for="aNewGroup">New section name</label><input id="aNewGroup" placeholder="e.g. Quizzes"></div>
+    <div class="bar" id="upBar"><i></i></div>
+    <div class="status-line" id="upStatus" style="display:none"><i></i><span></span></div>
+    <div class="mactions"><button class="btn ghost" data-close>Cancel</button><button class="btn primary" id="upBtn">Upload</button></div>
+  </div>
+</div>
+
+<!-- delete modal -->
+<div class="modal" id="delModal" role="dialog" aria-modal="true">
+  <div class="mbox">
+    <h3>Delete this file?</h3>
+    <p id="delText"></p>
+    <div class="status-line" id="delStatus" style="display:none"><i></i><span></span></div>
+    <div class="mactions"><button class="btn ghost" data-close>Cancel</button><button class="btn danger" id="delBtn">Delete</button></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
 
 <div class="viewer" id="viewer" role="dialog" aria-modal="true">
   <div class="vbar">
-    <button class="vbtn" id="close" title="رجوع">✕</button>
+    <button class="vbtn" id="close" title="Back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
     <div class="vt"><div class="path" id="vpath"></div><div id="vtitle"></div></div>
     <span class="pg" id="pg"></span>
-    <button class="vbtn hide-sm" id="zout" title="تصغير">−</button>
-    <button class="vbtn hide-sm" id="zin" title="تكبير">+</button>
-    <a class="vbtn" id="raw" target="_blank" rel="noopener" title="افتح الملف لوحده">↗</a>
+    <button class="vbtn hide-sm" id="zout" title="Zoom out">−</button>
+    <button class="vbtn hide-sm" id="zin" title="Zoom in">+</button>
+    <a class="vbtn" id="dl" title="Download" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></a>
+    <a class="vbtn" id="raw" target="_blank" rel="noopener" title="Open in new tab"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
   </div>
   <div class="pages" id="pages"></div>
 </div>
@@ -202,178 +354,408 @@ footer .container{display:flex;justify-content:space-between;padding-top:18px;pa
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"></script>
 <script>
-const DATA = [{"id": "dcs", "name": "Distributed Computer Systems", "short": "DCS", "groups": [{"id": "from-chats", "title": "PDFs من الشاتات", "items": [{"t": "إجابات Assignment 1 و 2", "f": "files/dcs/ass-answers.pdf", "pages": 30, "mb": 0.5}]}, {"id": "lectures", "title": "المحاضرات", "items": [{"t": "Ch1 · Introduction to Distributed Computing Systems", "f": "files/dcs/ch1.pdf", "pages": 90, "mb": 3.0}, {"t": "Ch2 · Moving Technologies & DCS Types", "f": "files/dcs/ch2.pdf", "pages": 42, "mb": 1.1}, {"t": "Ch3 · DCS Examples", "f": "files/dcs/ch3.pdf", "pages": 69, "mb": 2.4}]}, {"id": "sections", "title": "السكاشن", "items": [{"t": "Section 1", "f": "files/dcs/sec1.pdf", "pages": 2, "mb": 0.3}, {"t": "Section 2", "f": "files/dcs/sec2.pdf", "pages": 2, "mb": 0.3}, {"t": "Section 3", "f": "files/dcs/sec3.pdf", "pages": 3, "mb": 0.3}]}, {"id": "labs", "title": "اللابات", "items": [{"t": "Lab 1", "f": "files/dcs/lab1.pdf", "pages": 3, "mb": 0.2}, {"t": "Lab 2", "f": "files/dcs/lab2.pdf", "pages": 3, "mb": 0.1}]}, {"id": "assignments", "title": "الأسايمنتات", "items": [{"t": "Sheet 1 · أسئلة وإجابات", "f": "files/dcs/ass1.pdf", "pages": 6, "mb": 0.3}, {"t": "Assignment 2 · نسخة الـ Word", "f": "files/dcs/ass2.pdf", "pages": 13, "mb": 1.3}, {"t": "Assignment 1 · الحل بتاعي", "f": "files/dcs/ass1-mine.pdf", "pages": 11, "mb": 0.9}, {"t": "Assignment 2 · الحل بتاعي (PDF)", "f": "files/dcs/ass2-mine.pdf", "pages": 12, "mb": 1.2}]}]}, {"id": "graphics", "name": "Computer Graphics & Man-Machine Interface", "short": "Graphics", "groups": [{"id": "from-chats", "title": "PDFs من الشاتات", "items": [{"t": "Study Guide · Lec 1–6 + Sec 1–7", "f": "files/gfx/chat-study-guide.pdf", "pages": 61, "mb": 5.7}, {"t": "Practice Models · 10 نماذج ميدترم محلولة", "f": "files/gfx/chat-practice-models.pdf", "pages": 113, "mb": 10.7}, {"t": "Quiz Bank · كويزات Moodle بإجاباتها", "f": "files/gfx/chat-quiz-bank.pdf", "pages": 23, "mb": 2.1}, {"t": "ملخص Lec 1–6", "f": "files/gfx/summary.pdf", "pages": 48, "mb": 5.3}, {"t": "بنك أسئلة Lec 1–6", "f": "files/gfx/qbank.pdf", "pages": 54, "mb": 5.7}, {"t": "Task 1 · شرح الكود سطر بسطر", "f": "files/gfx/chat-task1-explained.pdf", "pages": 8, "mb": 0.8}, {"t": "Task 1 · الكود والناتج", "f": "files/gfx/chat-task1.pdf", "pages": 4, "mb": 0.1}]}, {"id": "lectures", "title": "المحاضرات", "items": [{"t": "Lecture 1", "f": "files/gfx/lec1.pdf", "pages": 27, "mb": 1.6}, {"t": "Lecture 2", "f": "files/gfx/lec2.pdf", "pages": 40, "mb": 2.1}, {"t": "Lecture 3", "f": "files/gfx/lec3.pdf", "pages": 28, "mb": 1.9}, {"t": "Lecture 4", "f": "files/gfx/lec4.pdf", "pages": 37, "mb": 1.9}, {"t": "Lecture 5", "f": "files/gfx/lec5.pdf", "pages": 27, "mb": 1.6}, {"t": "Lecture 6", "f": "files/gfx/lec6.pdf", "pages": 43, "mb": 2.0}]}, {"id": "sections", "title": "السكاشن والشيتات", "items": [{"t": "Section 1 & 2", "f": "files/gfx/sec1-2.pdf", "pages": 4, "mb": 0.6}, {"t": "Section 3", "f": "files/gfx/sec3.pdf", "pages": 2, "mb": 0.5}, {"t": "Section 4", "f": "files/gfx/sec4.pdf", "pages": 2, "mb": 0.2}, {"t": "Section 5", "f": "files/gfx/sec5.pdf", "pages": 2, "mb": 0.3}, {"t": "Section 6", "f": "files/gfx/sec6.pdf", "pages": 3, "mb": 0.9}, {"t": "Section 7", "f": "files/gfx/sec7.pdf", "pages": 3, "mb": 0.3}, {"t": "Exercise Sheet 1", "f": "files/gfx/sheet1.pdf", "pages": 2, "mb": 0.3}, {"t": "كل السكاشن بخط الإيد · جزء 1", "f": "files/gfx/allsec-p1.pdf", "pages": 26, "mb": 12.6}, {"t": "كل السكاشن بخط الإيد · جزء 2", "f": "files/gfx/allsec-p2.pdf", "pages": 25, "mb": 11.8}]}, {"id": "old", "title": "سنين سابقة", "items": [{"t": "سكاشن لحد الميدترم (بخط الإيد)", "f": "files/gfx/old-sec-mt.pdf", "pages": 16, "mb": 6.5}, {"t": "Quizzes", "f": "files/gfx/old-quizzes.pdf", "pages": 39, "mb": 2.5}, {"t": "Questions 1–4", "f": "files/gfx/old-q1-4.pdf", "pages": 12, "mb": 0.1}, {"t": "Assignment 1", "f": "files/gfx/old-ass1.pdf", "pages": 3, "mb": 0.2}, {"t": "الامتحان العملي", "f": "files/gfx/old-practical.pdf", "pages": 2, "mb": 0.1}, {"t": "نوت بخط الإيد (CamScanner)", "f": "files/gfx/old-scan.pdf", "pages": 8, "mb": 2.8}, {"t": "لينكات فيديوهات المحاضرات", "f": "files/gfx/links.pdf", "pages": 1, "mb": 0.1}]}]}, {"id": "dsp", "name": "Digital Signal Processing", "short": "DSP", "groups": [{"id": "from-chats", "title": "PDFs من الشات", "items": [{"t": "Ch1 · Theory (Night Mode)", "f": "files/dsp/chat-ch1-theory-nm.pdf", "pages": 33, "mb": 2.0}, {"t": "Ch1 · Problems & Sheet 1 (Night Mode)", "f": "files/dsp/chat-ch1-problems-nm.pdf", "pages": 56, "mb": 3.8}, {"t": "Ch2 · Theory (Night Mode)", "f": "files/dsp/chat-ch2-theory-nm.pdf", "pages": 20, "mb": 1.4}, {"t": "Ch2 · Problems, Sheet 2 & Assignment (Night Mode)", "f": "files/dsp/chat-ch2-problems-nm.pdf", "pages": 61, "mb": 3.0}, {"t": "Ch1 · Theory & Problems (النسخة الأولى)", "f": "files/dsp/chat-ch1-tp.pdf", "pages": 40, "mb": 1.8}, {"t": "Ch1 · حل Sheet 1", "f": "files/dsp/chat-ch1-sheet1.pdf", "pages": 13, "mb": 0.7}, {"t": "Ch2 · Theory & Problems (النسخة الأولى)", "f": "files/dsp/chat-ch2-tp.pdf", "pages": 48, "mb": 1.6}, {"t": "Ch2 · حل Sheet 2", "f": "files/dsp/chat-ch2-sheet2.pdf", "pages": 14, "mb": 0.7}, {"t": "التقرير · التحضير للمناقشة", "f": "files/dsp/chat-report-prep.pdf", "pages": 88, "mb": 3.4}, {"t": "التقرير · شرح سطر بسطر", "f": "files/dsp/chat-report-full.pdf", "pages": 125, "mb": 3.9}, {"t": "التقرير · شرح سطر بسطر (مختصر)", "f": "files/dsp/chat-report-compact.pdf", "pages": 68, "mb": 2.6}]}, {"id": "lectures", "title": "المحاضرات · Ch1–Ch2", "items": [{"t": "Lecture 1 · Introducing the Course", "f": "files/dsp/lec1.pdf", "pages": 21, "mb": 1.6}, {"t": "Lecture 2 · Ch1", "f": "files/dsp/lec2.pdf", "pages": 29, "mb": 2.3}, {"t": "Lecture 3 · Ch1", "f": "files/dsp/lec3.pdf", "pages": 26, "mb": 1.9}, {"t": "Lecture 4 · Ch1", "f": "files/dsp/lec4.pdf", "pages": 49, "mb": 4.7}, {"t": "Lecture 4-2 · Modified Solved Examples", "f": "files/dsp/lec4-2.pdf", "pages": 12, "mb": 0.9}, {"t": "Lecture 5 · Ch2", "f": "files/dsp/lec5.pdf", "pages": 32, "mb": 2.7}, {"t": "Lecture 6 · Ch2", "f": "files/dsp/lec6.pdf", "pages": 25, "mb": 2.8}]}, {"id": "lectures-later", "title": "المحاضرات · Ch3–Ch5 (Summer 2026)", "items": [{"t": "Lecture 7 · Ch3", "f": "files/dsp/lec7.pdf", "pages": 69, "mb": 4.1}, {"t": "Lecture 8 · Ch3", "f": "files/dsp/lec8.pdf", "pages": 62, "mb": 3.1}, {"t": "Lecture 9 · Ch4 · Objectives", "f": "files/dsp/lec9.pdf", "pages": 51, "mb": 2.7}, {"t": "Lecture 10-1 · Ch4 · Partial Fraction", "f": "files/dsp/lec10-1.pdf", "pages": 28, "mb": 1.6}, {"t": "Lecture 10-2 · Ch4 · Residue", "f": "files/dsp/lec10-2.pdf", "pages": 33, "mb": 2.0}, {"t": "Lecture 11 · Ch4 · Z-Transform Applications", "f": "files/dsp/lec11.pdf", "pages": 16, "mb": 0.5}, {"t": "Chapter 5", "f": "files/dsp/ch5.pdf", "pages": 32, "mb": 0.7}]}, {"id": "sheets", "title": "الشيتات وحلولها", "items": [{"t": "Sheet 1", "f": "files/dsp/sheet1.pdf", "pages": 2, "mb": 0.2}, {"t": "Sheet 1 · محلول", "f": "files/dsp/sheet1-sol.pdf", "pages": 6, "mb": 0.9}, {"t": "Sheet 2", "f": "files/dsp/sheet2.pdf", "pages": 1, "mb": 0.1}, {"t": "Sheet 2 · محلول", "f": "files/dsp/sheet2-sol.pdf", "pages": 2, "mb": 0.3}, {"t": "Sheet 3", "f": "files/dsp/sheet3.pdf", "pages": 1, "mb": 0.1}, {"t": "Sheet 3 · محلول", "f": "files/dsp/sheet3-sol.pdf", "pages": 3, "mb": 0.5}, {"t": "كل الشيتات محلولة", "f": "files/dsp/sheets-all.pdf", "pages": 19, "mb": 4.7}, {"t": "Revision Sheet 1", "f": "files/dsp/rev1.pdf", "pages": 1, "mb": 0.1}, {"t": "Revision Sheet 2", "f": "files/dsp/rev2.pdf", "pages": 1, "mb": 0.1}, {"t": "Ch5 · Revision Problems", "f": "files/dsp/rev-ch5.pdf", "pages": 1, "mb": 0.1}]}, {"id": "sections", "title": "سكاشن المعيدين", "items": [{"t": "Eng. Khalaf · دليل طريقة الحل", "f": "files/dsp/khalaf-guide.pdf", "pages": 6, "mb": 2.3}, {"t": "Eng. Khalaf · نظري", "f": "files/dsp/khalaf-theory.pdf", "pages": 16, "mb": 5.3}, {"t": "Eng. Khalaf · المهم في Sheet 1", "f": "files/dsp/khalaf-important.pdf", "pages": 1, "mb": 0.1}, {"t": "Eng. Loka · Ch1 Section 2024", "f": "files/dsp/loka-ch1.pdf", "pages": 26, "mb": 5.7}, {"t": "Eng. Loka · نظري Ch1", "f": "files/dsp/loka-ch1-theory.pdf", "pages": 8, "mb": 1.3}, {"t": "Eng. Loka · FFT", "f": "files/dsp/loka-fft.pdf", "pages": 6, "mb": 0.6}, {"t": "Eng. Loka · Convolution", "f": "files/dsp/loka-conv.pdf", "pages": 7, "mb": 1.1}, {"t": "Eng. Loka · Correlation", "f": "files/dsp/loka-corr.pdf", "pages": 6, "mb": 0.9}, {"t": "Eng. Loka · Z-Transform Part 1", "f": "files/dsp/loka-z.pdf", "pages": 7, "mb": 2.1}, {"t": "Eng. Loka · Residue Solution", "f": "files/dsp/loka-residue.pdf", "pages": 3, "mb": 0.3}, {"t": "Eng. Loka · Chapter 5", "f": "files/dsp/loka-ch5.pdf", "pages": 4, "mb": 0.3}, {"t": "Section · Ch5", "f": "files/dsp/sec-ch5.pdf", "pages": 8, "mb": 0.9}]}, {"id": "midterms", "title": "امتحانات ميدترم وكويزات", "items": [{"t": "Midterm · 12-11-2025", "f": "files/dsp/mid-2025-11.pdf", "pages": 1, "mb": 0.1}, {"t": "Midterm · 26-7-2026", "f": "files/dsp/mid-2026-07.pdf", "pages": 1, "mb": 0.1}, {"t": "Midterm · 31-7-2023", "f": "files/dsp/mid-2023-07.pdf", "pages": 1, "mb": 0.1}, {"t": "Midterm · 28-11-2021", "f": "files/dsp/mid-2021-11.pdf", "pages": 1, "mb": 0.1}, {"t": "Midterm · 8-12-2020", "f": "files/dsp/mid-2020-12.pdf", "pages": 1, "mb": 0.1}, {"t": "Midterm · 14-11-2019 · محلول", "f": "files/dsp/mid-2019-11.pdf", "pages": 1, "mb": 0.2}, {"t": "Midterm 1", "f": "files/dsp/mid-1.pdf", "pages": 1, "mb": 0.1}, {"t": "Midterm 2", "f": "files/dsp/mid-2.pdf", "pages": 1, "mb": 0.1}, {"t": "Midterm · قديم", "f": "files/dsp/mid-old.pdf", "pages": 16, "mb": 0.9}, {"t": "Quiz 1", "f": "files/dsp/quiz1.pdf", "pages": 1, "mb": 0.1}, {"t": "Quiz 2 · Summer 2026", "f": "files/dsp/quiz2.pdf", "pages": 5, "mb": 0.3}]}, {"id": "finals", "title": "امتحانات فاينال", "items": [{"t": "Final · 17-8-2026", "f": "files/dsp/fin-2026-08.pdf", "pages": 1, "mb": 0.1}, {"t": "Final · 9-6-2026", "f": "files/dsp/fin-2026-06.pdf", "pages": 1, "mb": 0.1}, {"t": "Final · 20-1-2025", "f": "files/dsp/fin-2025-01.pdf", "pages": 1, "mb": 0.1}, {"t": "حل مسألة Residue · امتحان 2025", "f": "files/dsp/fin-2025-residue.pdf", "pages": 5, "mb": 2.7}, {"t": "Final · 18-1-2024", "f": "files/dsp/fin-2024-01.pdf", "pages": 1, "mb": 0.2}, {"t": "Final · 11-6-2023", "f": "files/dsp/fin-2023-06b.pdf", "pages": 1, "mb": 0.1}, {"t": "Final · 7-6-2023", "f": "files/dsp/fin-2023-06a.pdf", "pages": 1, "mb": 0.1}, {"t": "Final · 23-1-2023", "f": "files/dsp/fin-2023-01.pdf", "pages": 1, "mb": 0.1}, {"t": "Final · 8-9-2021", "f": "files/dsp/fin-2021-09.pdf", "pages": 11, "mb": 2.3}, {"t": "Final · 27-6-2021", "f": "files/dsp/fin-2021-06.pdf", "pages": 10, "mb": 2.1}, {"t": "Final · 4-3-2021", "f": "files/dsp/fin-2021-03.pdf", "pages": 9, "mb": 2.2}, {"t": "Final · 28-12-2019", "f": "files/dsp/fin-2019-12.pdf", "pages": 1, "mb": 0.1}, {"t": "Final · 12-1-2019", "f": "files/dsp/fin-2019-01.pdf", "pages": 1, "mb": 0.1}, {"t": "Final · 23-12-2017", "f": "files/dsp/fin-2017-12.pdf", "pages": 2, "mb": 0.2}, {"t": "Final · 2-1-2017", "f": "files/dsp/fin-2017-01.pdf", "pages": 2, "mb": 0.1}]}, {"id": "notes", "title": "ملخصات ومذكرات", "items": [{"t": "DSP Student Notebook", "f": "files/dsp/notebook.pdf", "pages": 22, "mb": 5.4}, {"t": "DSP نظري", "f": "files/dsp/nazary.pdf", "pages": 14, "mb": 4.6}, {"t": "نظري الميد", "f": "files/dsp/theory-mid.pdf", "pages": 5, "mb": 0.4}, {"t": "نظري فينال", "f": "files/dsp/theory-final.pdf", "pages": 6, "mb": 0.9}, {"t": "DSP Sections · مسائل", "f": "files/dsp/sections-problems.pdf", "pages": 49, "mb": 17.4}, {"t": "Eng. Basma · DSP", "f": "files/dsp/basma.pdf", "pages": 46, "mb": 13.1}, {"t": "Quiz 1 + إجابة", "f": "files/dsp/quiz1-hand.pdf", "pages": 8, "mb": 1.1}, {"t": "Ch5 · من الفيديو", "f": "files/dsp/ch5-video.pdf", "pages": 11, "mb": 0.4}, {"t": "آخر شابتر", "f": "files/dsp/last-chapter.pdf", "pages": 4, "mb": 0.5}, {"t": "تسليمة DSP", "f": "files/dsp/taslima.pdf", "pages": 4, "mb": 0.8}]}, {"id": "book", "title": "الكتاب وأسئلته", "items": [{"t": "DSP ELC 422 · Theoretical Part", "f": "files/dsp/book.pdf", "pages": 194, "mb": 4.4}, {"t": "أسئلة الكتاب · Ch1", "f": "files/dsp/book-q1.pdf", "pages": 4, "mb": 0.2}, {"t": "أسئلة الكتاب · Ch2", "f": "files/dsp/book-q2.pdf", "pages": 3, "mb": 0.1}, {"t": "أسئلة الكتاب · Ch3", "f": "files/dsp/book-q3.pdf", "pages": 3, "mb": 0.2}, {"t": "أسئلة الكتاب · Ch4", "f": "files/dsp/book-q4.pdf", "pages": 6, "mb": 0.2}, {"t": "أسئلة الكتاب · Ch5", "f": "files/dsp/book-q5.pdf", "pages": 3, "mb": 0.2}, {"t": "امتحانات قديمة من الكتاب", "f": "files/dsp/book-exams.pdf", "pages": 4, "mb": 0.3}]}, {"id": "lab", "title": "اللاب", "items": [{"t": "Lab DSP", "f": "files/dsp/lab.pdf", "pages": 9, "mb": 2.8}, {"t": "EX1 · التقرير بتاعي", "f": "files/dsp/lab-ex1-mine.pdf", "pages": 7, "mb": 0.5}, {"t": "EX2 · التقرير بتاعي", "f": "files/dsp/lab-ex2-mine.pdf", "pages": 3, "mb": 0.2}, {"t": "Report 1 · Digital Waveforms Generation", "f": "files/dsp/lab-r1.pdf", "pages": 1, "mb": 0.8}, {"t": "Report 2 · FFT", "f": "files/dsp/lab-r2.pdf", "pages": 1, "mb": 0.6}, {"t": "Report 3 · Convolution", "f": "files/dsp/lab-r3.pdf", "pages": 1, "mb": 0.8}, {"t": "Report 4 · Digital Filters", "f": "files/dsp/lab-r4.pdf", "pages": 1, "mb": 0.9}]}, {"id": "report", "title": "التقرير والميني بروجكت", "items": [{"t": "Lecture Report · التقرير بتاعي", "f": "files/dsp/lec-report.pdf", "pages": 29, "mb": 1.1}, {"t": "Mini Project · Adaptive Channel Equalizer", "f": "files/dsp/mini.pdf", "pages": 15, "mb": 1.0}, {"t": "Mini Project · Code & Figures", "f": "files/dsp/mini-code.pdf", "pages": 4, "mb": 0.6}, {"t": "Mini Project · Instructions", "f": "files/dsp/mini-inst.pdf", "pages": 3, "mb": 0.4}]}, {"id": "links", "title": "لينكات الفيديوهات", "items": [{"t": "لينكات المحاضرات", "f": "files/dsp/links-lec.pdf", "pages": 1, "mb": 0.0}, {"t": "لينكات السكاشن", "f": "files/dsp/links-sec.pdf", "pages": 1, "mb": 0.1}, {"t": "لينكات Eng. Khalaf", "f": "files/dsp/links-khalaf.pdf", "pages": 1, "mb": 0.0}, {"t": "لينكات اللاب", "f": "files/dsp/links-lab.pdf", "pages": 1, "mb": 0.0}]}]}];
-const COLORS = {dcs:'var(--accent)', graphics:'var(--accent-2)', dsp:'var(--accent-3)'};
-const CODES = {dcs:'CMPN421', graphics:'CMPN322', dsp:'ELCn425'};
-const SOON = [];
+// ---------- config ----------
+const REPO_DEFAULT = {owner:'mostafamohamwd4', repo:'mawady', branch:'gh-pages'};
+const ICONS = {
+  dcs:'<path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="3"/><circle cx="12" cy="3" r="1.5"/><circle cx="12" cy="21" r="1.5"/><circle cx="3" cy="12" r="1.5"/><circle cx="21" cy="12" r="1.5"/>',
+  graphics:'<path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 16 9 5 9-5"/><path d="m3 12 9 5 9-5"/>',
+  dsp:'<path d="M2 12h3l3-8 4 16 3-10 2 2h5"/>',
+  default:'<path d="M4 19.5V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-1.5Z"/><path d="M8 7h6"/>'
+};
+const ARROW = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const TRASH = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg>';
+const PLUS = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>';
+
 const $ = s => document.querySelector(s);
-const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const store = {get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}}, set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const store = {get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}}, set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}, del(k){try{localStorage.removeItem(k)}catch(e){}}};
+const icon = (id, size=22) => `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ICONS[id]||ICONS.default}</svg>`;
+$('#yr').textContent = new Date().getFullYear();
 
-const all = [];
-DATA.forEach(c => c.groups.forEach(g => g.items.forEach(it => { it.course = c; it.group = g; all.push(it); })));
-const totalPages = all.reduce((a,x)=>a+x.pages,0);
-$('#total').textContent = `${all.length} files · ${totalPages} pages`;
+let DATA = {courses: []}, all = [];
+function index(){
+  all = [];
+  DATA.courses.forEach(c => c.groups.forEach(g => g.items.forEach(it => { it.course = c; it.group = g; all.push(it); })));
+  const pages = all.reduce((a,x)=>a+(x.pages||0),0);
+  $('#total').textContent = `${all.length} files · ${pages.toLocaleString()} pages`;
+}
+const strip = () => JSON.parse(JSON.stringify(DATA, (k,v) => (k==='course'||k==='group') ? undefined : v));
 
-const fileCard = (it, showCourse) => `<button class="file" data-f="${it.f}" style="--c:${COLORS[it.course.id]}">${showCourse?`<span class="cname">${esc(it.course.short)} · ${esc(it.group.title)}</span>`:''}<span class="t">${esc(it.t)}</span><span class="m"><span><b>${it.pages}</b> pages</span><span>${it.mb} MB</span></span></button>`;
+function toast(msg, kind=''){ const t=$('#toast'); t.textContent=msg; t.className='toast show '+kind; clearTimeout(toast.h); toast.h=setTimeout(()=>t.className='toast',4200); }
 
+const fileCard = (it, ctx) => {
+  const isNew = it.added && (Date.now()-it.added < 7*864e5);
+  return `<div class="file" role="button" tabindex="0" data-f="${esc(it.f)}" style="--c:${it.course.color}">
+    <div class="fico"><span>PDF</span></div>
+    <div class="fbody">${ctx?`<span class="ctx">${esc(it.course.short)} · ${esc(it.group.title)}</span>`:''}<span class="t">${esc(it.t)}</span><span class="m"><span>${it.pages||'?'} pages</span><span>${it.mb} MB</span></span></div>
+    ${isNew?'<span class="new">NEW</span>':''}
+    <button class="del" data-del="${esc(it.f)}" title="Delete file" aria-label="Delete file">${TRASH}</button>
+  </div>`;
+};
+
+// ---------- render ----------
 function renderNav(route){
-  $('#links').innerHTML = `<a href="#home" class="${route==='home'?'on':''}">الرئيسية</a>` +
-    DATA.map(c => `<a href="#${c.id}" style="--c:${COLORS[c.id]}" class="${route===c.id?'on':''}"><span class="dot"></span>${esc(c.short)}</a>`).join('');
+  $('#links').innerHTML = `<a href="#home" class="${route==='home'?'on':''}">Home</a>` +
+    DATA.courses.map(c => `<a href="#${c.id}" style="--c:${c.color}" class="${route===c.id?'on':''}"><span class="dot"></span>${esc(c.short)}</a>`).join('');
+  $('#adminbtn').classList.toggle('on', isAdmin());
 }
 
 function renderHome(){
-  const fromChats = all.filter(x => x.group.id==='from-chats').length;
-  $('#stats').innerHTML = [[DATA.length,'مادة'],[all.length,'ملف'],[totalPages,'صفحة'],[fromChats,'ملف من الشاتات']]
+  const pages = all.reduce((a,x)=>a+(x.pages||0),0);
+  const exams = all.filter(x => /exam|midterm|final|quiz/i.test(x.group.title+' '+x.t)).length;
+  $('#stats').innerHTML = [[DATA.courses.length,'Courses'],[all.length,'Files'],[pages.toLocaleString(),'Pages'],[exams,'Exams & quizzes']]
     .map(([n,l]) => `<div class="stat"><b>${n}</b><span>${l}</span></div>`).join('');
-  $('#courses').innerHTML = DATA.map(c => {
+  $('#courses').innerHTML = DATA.courses.map(c => {
     const n = c.groups.reduce((a,g)=>a+g.items.length,0);
-    return `<a class="ccard" href="#${c.id}" style="--c:${COLORS[c.id]}"><div><div class="code">${CODES[c.id]||''} · ${esc(c.short)}</div><h3>${esc(c.name)}</h3></div>
-      <div class="chips">${c.groups.slice(0,5).map(g => `<span>${esc(g.title)} · ${g.items.length}</span>`).join('')}${c.groups.length>5?`<span>+${c.groups.length-5} أقسام</span>`:''}</div>
-      <div class="go"><span>${n} ملف</span><b>افتح المادة ←</b></div></a>`;
-  }).join('') + SOON.map(([id,name]) => `<div class="ccard soon" style="--c:var(--line)"><div><div class="code" style="color:var(--faint)">قريبًا</div><h3>${name}</h3></div><div class="go"><span>لسه ما اتضافتش</span></div></div>`).join('');
-  const r = (store.get('recent')||[]).map(f => all.find(x => x.f===f)).filter(Boolean).slice(0,4);
+    const p = c.groups.reduce((a,g)=>a+g.items.reduce((b,x)=>b+(x.pages||0),0),0);
+    return `<a class="ccard" href="#${c.id}" style="--c:${c.color}">
+      <div class="top"><div class="ico">${icon(c.id)}</div><span class="pill">${esc(c.code||c.short)}</span></div>
+      <h3>${esc(c.name)}</h3>
+      <div class="meta"><span><b>${n}</b> files</span><span><b>${c.groups.length}</b> sections</span><span><b>${p.toLocaleString()}</b> pages</span></div>
+      <div class="chips">${c.groups.slice(0,4).map(g => `<span>${esc(g.title)}</span>`).join('')}${c.groups.length>4?`<span>+${c.groups.length-4} more</span>`:''}</div>
+      <span class="go">Open course ${ARROW}</span></a>`;
+  }).join('');
+  const r = (store.get('recent')||[]).map(f => all.find(x => x.f===f)).filter(Boolean).slice(0,3);
   $('#recentWrap').style.display = r.length ? 'block' : 'none';
-  $('#recent').innerHTML = r.map(it => `<button data-f="${it.f}" style="--c:${COLORS[it.course.id]}"><small>${esc(it.course.short)} · ${esc(it.group.title)}</small>${esc(it.t)}</button>`).join('');
+  $('#recent').innerHTML = r.map(it => fileCard(it, true)).join('');
+  const latest = all.filter(x => x.added).sort((a,b)=>b.added-a.added).slice(0,6);
+  $('#latestWrap').style.display = latest.length ? 'block' : 'none';
+  $('#latest').innerHTML = latest.map(it => fileCard(it, true)).join('');
 }
 
 function renderCourse(c){
   const n = c.groups.reduce((a,g)=>a+g.items.length,0);
-  const pages = c.groups.reduce((a,g)=>a+g.items.reduce((b,x)=>b+x.pages,0),0);
-  document.getElementById('v-course').style.setProperty('--c', COLORS[c.id]);
-  $('#chead').innerHTML = `<div class="crumb"><a href="#home">home</a> / <b>${esc(c.short.toLowerCase())}</b></div><h1>${esc(c.name)}</h1><p>${n} ملف · ${pages} صفحة · <span dir="ltr">${CODES[c.id]||''}</span></p>`;
+  const pages = c.groups.reduce((a,g)=>a+g.items.reduce((b,x)=>b+(x.pages||0),0),0);
+  $('#v-course').style.setProperty('--c', c.color);
+  $('#chead').innerHTML = `<div class="crumb"><a href="#home">home</a> / <b>${esc(c.short.toLowerCase())}</b></div>
+    <div class="chead"><div class="l"><div class="ico">${icon(c.id,28)}</div><div><h1>${esc(c.name)}</h1>
+    <p><span class="pill">${esc(c.code||c.short)}</span><span>${n} files</span><span>${c.groups.length} sections</span><span>${pages.toLocaleString()} pages</span></p></div></div>
+    <button class="btn accent admin-only" data-add="${c.id}">${PLUS}Add PDF</button></div>`;
   $('#subnav').innerHTML = c.groups.map(g => `<button data-g="${c.id}-${g.id}">${esc(g.title)}<i>${g.items.length}</i></button>`).join('');
-  $('#cbody').innerHTML = c.groups.map(g => `<section class="group" id="g-${c.id}-${g.id}"><h3>${esc(g.title)} <em>${g.items.length} files</em></h3><div class="grid">${g.items.map(it => fileCard(it,false)).join('')}</div></section>`).join('');
+  $('#cbody').innerHTML = c.groups.map(g => `<section class="group" id="g-${c.id}-${g.id}">
+    <div class="ghead"><h3>${esc(g.title)} <em>${g.items.length}</em></h3><button class="btn sm admin-only" data-add="${c.id}" data-addg="${g.id}">${PLUS}Add here</button></div>
+    <div class="grid">${g.items.map(it => fileCard(it,false)).join('') || '<div class="empty">No files yet.</div>'}</div></section>`).join('')
+    || '<div class="empty" style="margin-top:36px">No files yet.</div>';
 }
 
 function renderSearch(){
-  const q = $('#q').value.trim().toLowerCase();
+  const raw = $('#q').value.trim(), q = raw.toLowerCase();
   const res = all.filter(it => (it.t+' '+it.group.title+' '+it.course.short+' '+it.course.name).toLowerCase().includes(q));
-  $('#stitle').textContent = `نتايج «${$('#q').value.trim()}»`;
-  $('#ssub').textContent = `${res.length} ملف`;
+  $('#stitle').textContent = `Results for “${raw}”`;
+  $('#ssub').textContent = `${res.length} file${res.length===1?'':'s'} across all courses`;
   $('#sres').innerHTML = res.map(it => fileCard(it,true)).join('');
   $('#sempty').style.display = res.length ? 'none' : 'block';
 }
 
-let lastRoute = null;
-function route(){
+// ---------- admin ----------
+const auth = () => store.get('mawady-admin');
+const isAdmin = () => !!(auth() && auth().token);
+function applyAdmin(){ document.body.classList.toggle('admin', isAdmin()); $('#adminbtn').classList.toggle('on', isAdmin()); }
+
+function renderAdmin(){
+  const a = auth();
+  if(a && a.token){
+    $('#adminPanel').innerHTML = `<h3>Connected</h3>
+      <div class="status-line ok"><i></i><span>Signed in as <b>${esc(a.login||a.owner)}</b> · publishing to <code>${esc(a.owner)}/${esc(a.repo)}</code> (${esc(a.branch)})</span></div>
+      <p style="margin-top:14px">Open any course and use <b>Add PDF</b>, or hover a file and click the bin icon to delete it. Changes go live for everyone in about a minute.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">${DATA.courses.map(c=>`<a class="btn sm" href="#${c.id}" style="--c:${c.color}">${esc(c.short)}</a>`).join('')}
+      <button class="btn sm danger" id="signout">Sign out on this device</button></div>`;
+    return;
+  }
+  $('#adminPanel').innerHTML = `<h3>Connect with a GitHub token</h3>
+    <p>Your files live in the GitHub repository behind this site, so uploads need a token that can write to it. The token stays in this browser only.</p>
+    <ol class="steps">
+      <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener"><code>github.com/settings/personal-access-tokens/new</code></a></li>
+      <li>Name it <code>mawady</code> and pick an expiration.</li>
+      <li>Repository access → <b>Only select repositories</b> → <code>mawady</code></li>
+      <li>Permissions → Repository permissions → <b>Contents: Read and write</b></li>
+      <li>Click <b>Generate token</b>, copy it, and paste it below.</li>
+    </ol>
+    <div style="height:18px"></div>
+    <div class="field"><label for="tok">Token</label><input id="tok" type="password" placeholder="github_pat_…" autocomplete="off"></div>
+    <div class="row">
+      <div class="field"><label for="rp">Repository</label><input id="rp" value="${REPO_DEFAULT.owner}/${REPO_DEFAULT.repo}"></div>
+      <div class="field"><label for="br">Branch</label><input id="br" value="${REPO_DEFAULT.branch}"></div>
+    </div>
+    <div class="status-line" id="cStatus" style="display:none"><i></i><span></span></div>
+    <div class="mactions"><button class="btn primary" id="connect">Connect</button></div>`;
+}
+
+async function gh(path, opts={}, a=auth()){
+  const r = await fetch(`https://api.github.com${path}`, {...opts, headers:{'Accept':'application/vnd.github+json','Authorization':`Bearer ${a.token}`,'X-GitHub-Api-Version':'2022-11-28', ...(opts.body?{'Content-Type':'application/json'}:{}), ...(opts.headers||{})}});
+  if(!r.ok){ let m=''; try{ m=(await r.json()).message }catch(e){} throw new Error(`${r.status} ${m||r.statusText}`); }
+  return r.status===204 ? null : r.json();
+}
+function setStatus(el, msg, kind){ el.style.display='flex'; el.className='status-line '+(kind||''); el.querySelector('span').innerHTML = msg; }
+
+async function connect(){
+  const token = $('#tok').value.trim(), [owner, repo] = $('#rp').value.trim().split('/'), branch = $('#br').value.trim()||'gh-pages';
+  const st = $('#cStatus');
+  if(!token || !owner || !repo){ setStatus(st,'Fill in the token and repository.','err'); return; }
+  const a = {token, owner, repo, branch};
+  setStatus(st,'Checking access…');
+  try{
+    const user = await gh('/user', {}, a).catch(()=>null);
+    const info = await gh(`/repos/${owner}/${repo}`, {}, a);
+    if(info.permissions && !info.permissions.push) throw new Error('This token cannot write to the repository.');
+    await gh(`/repos/${owner}/${repo}/git/ref/heads/${branch}`, {}, a);
+    a.login = user ? user.login : owner;
+    store.set('mawady-admin', a); applyAdmin(); renderAdmin(); renderNav('admin');
+    toast('Connected. You can now add and delete files.', 'ok');
+  }catch(e){
+    setStatus(st, `Couldn’t connect: ${esc(e.message)}. Check the token permissions and repository name.`, 'err');
+  }
+}
+
+const b64utf8 = s => { const bytes = new TextEncoder().encode(s); let bin=''; for(let i=0;i<bytes.length;i+=0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i,i+0x8000)); return btoa(bin); };
+const fileB64 = f => new Promise((res,rej) => { const r = new FileReader(); r.onload = () => res(String(r.result).split(',')[1]); r.onerror = rej; r.readAsDataURL(f); });
+
+async function readRemoteData(a){
+  const j = await gh(`/repos/${a.owner}/${a.repo}/contents/data.json?ref=${encodeURIComponent(a.branch)}&t=${Date.now()}`, {}, a);
+  const bin = atob(j.content.replace(/\n/g,'')); const bytes = Uint8Array.from(bin, ch => ch.charCodeAt(0));
+  return JSON.parse(new TextDecoder().decode(bytes));
+}
+
+async function commit(a, changes, message, progress){
+  const base = `/repos/${a.owner}/${a.repo}`;
+  const ref = await gh(`${base}/git/ref/heads/${a.branch}`, {}, a);
+  const head = await gh(`${base}/git/commits/${ref.object.sha}`, {}, a);
+  const tree = [];
+  for(const ch of changes){
+    if(ch.content == null){ tree.push({path: ch.path, mode:'100644', type:'blob', sha: null}); continue; }
+    progress && progress(ch);
+    const blob = await gh(`${base}/git/blobs`, {method:'POST', body: JSON.stringify({content: ch.content, encoding:'base64'})}, a);
+    tree.push({path: ch.path, mode:'100644', type:'blob', sha: blob.sha});
+  }
+  const t = await gh(`${base}/git/trees`, {method:'POST', body: JSON.stringify({base_tree: head.tree.sha, tree})}, a);
+  const c = await gh(`${base}/git/commits`, {method:'POST', body: JSON.stringify({message, tree: t.sha, parents:[ref.object.sha]})}, a);
+  await gh(`${base}/git/refs/heads/${a.branch}`, {method:'PATCH', body: JSON.stringify({sha: c.sha})}, a);
+}
+
+// add modal
+let pickedFile = null;
+function openModal(id){ $(id).classList.add('open'); }
+function closeModals(){ document.querySelectorAll('.modal').forEach(m => m.classList.remove('open')); }
+function fillGroups(cid, gid){
+  const c = DATA.courses.find(x => x.id===cid) || DATA.courses[0];
+  $('#aGroup').innerHTML = c.groups.map(g => `<option value="${esc(g.id)}">${esc(g.title)}</option>`).join('') + '<option value="__new">+ New section…</option>';
+  if(gid) $('#aGroup').value = gid;
+  $('#newGroupField').style.display = $('#aGroup').value==='__new' ? 'flex' : 'none';
+}
+function openAdd(cid, gid){
+  if(!isAdmin()){ location.hash='admin'; return; }
+  pickedFile = null; $('#fileIn').value=''; $('#aTitle').value=''; $('#aNewGroup').value='';
+  $('#dropText').innerHTML = '<b>Choose a PDF</b> or drop it here<br><small>Up to 95 MB</small>';
+  $('#upBar').style.display='none'; $('#upBar i').style.width='0'; $('#upStatus').style.display='none'; $('#upBtn').disabled=false;
+  $('#aCourse').innerHTML = DATA.courses.map(c => `<option value="${c.id}">${esc(c.short)} · ${esc(c.name)}</option>`).join('');
+  $('#aCourse').value = cid || DATA.courses[0].id; fillGroups($('#aCourse').value, gid);
+  openModal('#addModal');
+}
+function pick(f){
+  if(!f) return;
+  if(!/\.pdf$/i.test(f.name) && f.type!=='application/pdf'){ toast('Please choose a PDF file.','err'); return; }
+  if(f.size > 95*1048576){ toast('That file is over 95 MB — GitHub can’t store it.','err'); return; }
+  pickedFile = f;
+  $('#dropText').innerHTML = `<b>${esc(f.name)}</b><br><small>${(f.size/1048576).toFixed(1)} MB · click to change</small>`;
+  if(!$('#aTitle').value) $('#aTitle').value = f.name.replace(/\.pdf$/i,'').replace(/[_]+/g,' ').trim();
+}
+const slug = s => (s.normalize('NFKD').replace(/[^\w\s-]/g,'').trim().toLowerCase().replace(/[\s_]+/g,'-').replace(/-+/g,'-').slice(0,50)) || 'file';
+
+async function upload(){
+  const a = auth(); const st = $('#upStatus'), bar = $('#upBar'), bi = $('#upBar i');
+  const title = $('#aTitle').value.trim(), cid = $('#aCourse').value; let gid = $('#aGroup').value; const newG = $('#aNewGroup').value.trim();
+  if(!pickedFile){ setStatus(st,'Choose a PDF first.','err'); return; }
+  if(!title){ setStatus(st,'Give the file a title.','err'); return; }
+  if(gid==='__new' && !newG){ setStatus(st,'Name the new section.','err'); return; }
+  $('#upBtn').disabled = true; bar.style.display='block';
+  try{
+    setStatus(st,'Reading the PDF…'); bi.style.width='10%';
+    const buf = await pickedFile.arrayBuffer();
+    let pages = null; try{ const d = await pdfjsLib.getDocument({data: buf.slice(0)}).promise; pages = d.numPages; d.destroy(); }catch(e){}
+    const content = await fileB64(pickedFile); bi.style.width='30%';
+    setStatus(st,'Uploading to GitHub… this can take a while for big files.');
+    const remote = await readRemoteData(a);
+    const course = remote.courses.find(c => c.id===cid); if(!course) throw new Error('Course not found in data.json');
+    let group;
+    if(gid==='__new'){ gid = slug(newG); let k=2; while(course.groups.some(g=>g.id===gid)) gid = slug(newG)+'-'+(k++); group = {id: gid, title: newG, items: []}; course.groups.push(group); }
+    else group = course.groups.find(g => g.id===gid);
+    if(!group) throw new Error('Section not found');
+    const path = `files/${cid}/${slug(title)}-${Date.now().toString(36)}.pdf`;
+    const item = {t: title, f: path, pages, mb: Math.round(pickedFile.size/1048576*10)/10, added: Date.now()};
+    group.items.push(item);
+    const anim = setInterval(()=>{ const w=parseFloat(bi.style.width)||30; if(w<88) bi.style.width=(w+2)+'%'; }, 500);
+    try{
+      await commit(a, [{path, content}, {path:'data.json', content: b64utf8(JSON.stringify(remote, null, 1))}], `Add ${title}`);
+    } finally { clearInterval(anim); }
+    bi.style.width='100%';
+    DATA = remote; index(); route(true);
+    setStatus(st,'Uploaded. It will be live for everyone in about a minute.','ok');
+    toast(`“${title}” added.`, 'ok');
+    setTimeout(closeModals, 900);
+  }catch(e){
+    setStatus(st, `Upload failed: ${esc(e.message)}`, 'err'); $('#upBtn').disabled=false;
+  }
+}
+
+let delTarget = null;
+function openDel(f){
+  const it = all.find(x => x.f===f); if(!it) return;
+  delTarget = it; $('#delText').textContent = `“${it.t}” will be removed from ${it.course.short} · ${it.group.title} for everyone.`;
+  $('#delStatus').style.display='none'; $('#delBtn').disabled=false; openModal('#delModal');
+}
+async function doDelete(){
+  const a = auth(), st = $('#delStatus'), it = delTarget; if(!it) return;
+  $('#delBtn').disabled = true; setStatus(st,'Deleting…');
+  try{
+    const remote = await readRemoteData(a);
+    remote.courses.forEach(c => c.groups.forEach(g => { g.items = g.items.filter(x => x.f!==it.f); }));
+    const changes = [{path:'data.json', content: b64utf8(JSON.stringify(remote, null, 1))}];
+    changes.push({path: it.f, content: null});
+    await commit(a, changes, `Delete ${it.t}`);
+    DATA = remote; index(); route(true);
+    closeModals(); toast(`“${it.t}” deleted.`, 'ok');
+  }catch(e){ setStatus(st, `Delete failed: ${esc(e.message)}`, 'err'); $('#delBtn').disabled=false; }
+}
+
+// ---------- routing ----------
+let lastRoute = null, prevRoute = 'home';
+function route(force){
   const h = location.hash.replace('#','');
+  if(h === 'courses-list'){ history.replaceState(null,'','#home'); lastRoute=null; route(); setTimeout(()=>document.getElementById('courses-list').scrollIntoView({behavior:'smooth'}),50); return; }
   const isFile = h.endsWith('-file');
   if(!isFile && viewer.classList.contains('open')) closeViewer(true);
   if(isFile && !viewer.classList.contains('open')){ history.replaceState(null,'', '#'+h.replace(/-file$/,'')); return route(); }
   const base = isFile ? h.replace(/-file$/,'') : (h || 'home');
-  if(base!=='search') $('#q').value='';
-  if(base === lastRoute) return;
+  if(base!=='search' && document.activeElement!==$('#q')) $('#q').value='';
+  if(base === lastRoute && !force) return;
+  const scroll = force ? window.scrollY : 0;
   lastRoute = base;
   document.querySelectorAll('.view').forEach(v => v.classList.remove('on'));
-  const c = DATA.find(x => x.id===base);
+  const c = DATA.courses.find(x => x.id===base);
   if(base==='search'){ renderSearch(); $('#v-search').classList.add('on'); renderNav('search'); }
+  else if(base==='admin'){ renderAdmin(); $('#v-admin').classList.add('on'); renderNav('admin'); }
   else if(c){ renderCourse(c); $('#v-course').classList.add('on'); renderNav(c.id); }
   else { renderHome(); $('#v-home').classList.add('on'); renderNav('home'); lastRoute='home'; }
-  window.scrollTo(0,0);
+  applyAdmin();
+  window.scrollTo(0, scroll);
 }
 
 // ---------- viewer ----------
 let doc = null, token = 0, scale = 1, observer = null;
 const viewer = $('#viewer'), pagesEl = $('#pages');
-
 async function openFile(f){
   const it = all.find(x => x.f===f); if(!it) return;
   const r = (store.get('recent')||[]).filter(x => x!==f); r.unshift(f); store.set('recent', r.slice(0,6));
-  viewer.style.setProperty('--c', COLORS[it.course.id]);
+  viewer.style.setProperty('--c', it.course.color);
   $('#vpath').textContent = `${it.course.short.toUpperCase()} / ${it.group.title}`;
   $('#vtitle').textContent = it.t;
-  $('#raw').href = it.f;
+  $('#raw').href = it.f; $('#dl').href = it.f; $('#dl').setAttribute('download', slug(it.t)+'.pdf');
   $('#pg').textContent = '';
   viewer.classList.add('open'); document.body.style.overflow = 'hidden';
-  const cur = (location.hash.replace('#','') || 'home').replace(/-file$/,'');
-  location.hash = cur + '-file';
+  location.hash = (location.hash.replace('#','') || 'home').replace(/-file$/,'') + '-file';
   const my = ++token;
   if(doc){ doc.destroy(); doc = null; }
-  pagesEl.innerHTML = `<div class="status">بيحمّل… <div class="prog"><i id="bar"></i></div></div>`;
+  pagesEl.innerHTML = `<div class="vstatus">Loading… <div class="prog"><i id="vbar"></i></div></div>`;
   try{
     const task = pdfjsLib.getDocument({url: it.f});
-    task.onProgress = p => { const b = $('#bar'); if(b && p.total) b.style.width = Math.round(p.loaded/p.total*100)+'%'; };
+    task.onProgress = p => { const b = $('#vbar'); if(b && p.total) b.style.width = Math.round(p.loaded/p.total*100)+'%'; };
     const d = await task.promise;
     if(my !== token){ d.destroy(); return; }
     doc = d; scale = 1; await layout(my);
   }catch(e){
     if(my !== token) return;
-    pagesEl.innerHTML = `<div class="status">الملف ما فتحش هنا. جرّب زرار ↗ فوق يفتحه لوحده.</div>`;
+    pagesEl.innerHTML = `<div class="vstatus">This file couldn’t be displayed here. Use the open or download button above.</div>`;
   }
 }
-
 async function layout(my){
   const first = await doc.getPage(1);
   const vp1 = first.getViewport({scale:1});
-  const avail = Math.min(pagesEl.clientWidth - 32, 1000);
-  const base = avail / vp1.width;
+  const base = Math.min(pagesEl.clientWidth - 32, 1000) / vp1.width;
   pagesEl.innerHTML = '';
   if(observer) observer.disconnect();
-  observer = new IntersectionObserver(entries => entries.forEach(e => {
-    const el = e.target, n = +el.dataset.n;
-    if(e.isIntersecting){ draw(el, n, base*scale, my); }
-  }), {root: pagesEl, rootMargin: '600px 0px'});
+  observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) draw(e.target, +e.target.dataset.n, base*scale, my); }), {root: pagesEl, rootMargin: '600px 0px'});
   for(let n=1; n<=doc.numPages; n++){
-    const el = document.createElement('div');
-    el.className = 'page'; el.dataset.n = n;
+    const el = document.createElement('div'); el.className = 'page'; el.dataset.n = n;
     el.style.width = vp1.width*base*scale+'px'; el.style.height = vp1.height*base*scale+'px';
     pagesEl.appendChild(el); observer.observe(el);
   }
   $('#pg').textContent = `1 / ${doc.numPages}`;
 }
-
 async function draw(el, n, s, my){
   if(el.dataset.done === String(s)) return;
   el.dataset.done = String(s);
   try{
-    const page = await doc.getPage(n);
-    if(my !== token) return;
+    const page = await doc.getPage(n); if(my !== token) return;
     const vp = page.getViewport({scale: s});
     el.style.width = vp.width+'px'; el.style.height = vp.height+'px';
     const dpr = Math.min(window.devicePixelRatio||1, 2);
-    const c = document.createElement('canvas');
-    c.width = Math.floor(vp.width*dpr); c.height = Math.floor(vp.height*dpr);
+    const c = document.createElement('canvas'); c.width = Math.floor(vp.width*dpr); c.height = Math.floor(vp.height*dpr);
     await page.render({canvasContext: c.getContext('2d'), viewport: vp, transform: dpr!==1?[dpr,0,0,dpr,0,0]:null}).promise;
-    if(my !== token) return;
-    el.innerHTML = ''; el.appendChild(c);
+    if(my !== token) return; el.innerHTML = ''; el.appendChild(c);
   }catch(e){ el.dataset.done = ''; }
 }
-
 function closeViewer(fromRoute){
   token++; viewer.classList.remove('open'); document.body.style.overflow = '';
-  if(observer) observer.disconnect();
-  if(doc){ doc.destroy(); doc = null; }
+  if(observer) observer.disconnect(); if(doc){ doc.destroy(); doc = null; }
   pagesEl.innerHTML = '';
   if(lastRoute==='home') renderHome();
   if(!fromRoute && location.hash.endsWith('-file')) history.back();
 }
 function zoom(f){ if(!doc) return; scale = Math.max(.5, Math.min(3, scale*f)); const top = pagesEl.scrollTop/pagesEl.scrollHeight; layout(token).then(()=>{ pagesEl.scrollTop = top*pagesEl.scrollHeight; }); }
+pagesEl.addEventListener('scroll', () => {
+  if(!doc) return; const mid = pagesEl.scrollTop + pagesEl.clientHeight/2; let n = 1;
+  for(const el of pagesEl.children){ if(el.offsetTop <= mid) n = +el.dataset.n || n; else break; }
+  $('#pg').textContent = `${n} / ${doc.numPages}`;
+}, {passive:true});
 
+// ---------- events ----------
 document.addEventListener('click', e => {
+  const d = e.target.closest('[data-del]'); if(d){ e.stopPropagation(); openDel(d.dataset.del); return; }
+  const add = e.target.closest('[data-add]'); if(add){ openAdd(add.dataset.add, add.dataset.addg); return; }
+  if(e.target.closest('[data-close]') || e.target.classList.contains('modal')){ closeModals(); return; }
   const b = e.target.closest('[data-f]'); if(b){ openFile(b.dataset.f); return; }
-  const g = e.target.closest('[data-g]'); if(g){ const el = document.getElementById('g-'+g.dataset.g); if(el) el.scrollIntoView({behavior:'smooth'}); }
+  const g = e.target.closest('[data-g]'); if(g){ const el = document.getElementById('g-'+g.dataset.g); if(el) el.scrollIntoView({behavior:'smooth'}); return; }
+  if(e.target.id==='connect') connect();
+  if(e.target.id==='signout'){ store.del('mawady-admin'); applyAdmin(); renderAdmin(); renderNav('admin'); toast('Signed out on this device.'); }
 });
-let prevRoute = 'home';
+document.addEventListener('keydown', e => {
+  if(e.key==='Escape'){ if(document.querySelector('.modal.open')) closeModals(); else if(viewer.classList.contains('open')) closeViewer(false); }
+  if(e.key==='Enter' && e.target.matches('.file')) openFile(e.target.dataset.f);
+  if(e.key==='/' && !/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName) && !viewer.classList.contains('open')){ e.preventDefault(); $('#q').focus(); }
+});
 $('#q').addEventListener('input', () => {
   const v = $('#q').value.trim();
   if(v){ if(lastRoute!=='search'){ prevRoute = lastRoute||'home'; location.hash = 'search'; } else renderSearch(); }
   else if(lastRoute==='search') location.hash = prevRoute;
 });
+$('#searchBtn').onclick = () => { window.scrollTo(0,0); $('#q').focus(); };
 $('#close').onclick = () => closeViewer(false);
-pagesEl.addEventListener('scroll', () => {
-  if(!doc) return;
-  const mid = pagesEl.scrollTop + pagesEl.clientHeight/2;
-  let n = 1;
-  for(const el of pagesEl.children){ if(el.offsetTop <= mid) n = +el.dataset.n || n; else break; }
-  $('#pg').textContent = `${n} / ${doc.numPages}`;
-}, {passive:true});
 $('#zin').onclick = () => zoom(1.25);
 $('#zout').onclick = () => zoom(0.8);
-window.addEventListener('hashchange', route);
-document.addEventListener('keydown', e => { if(e.key==='Escape' && viewer.classList.contains('open')) closeViewer(false); });
-if(location.hash==='#search') history.replaceState(null,'','#home');
-route();
+$('#fileIn').onchange = e => pick(e.target.files[0]);
+const drop = $('#drop');
+['dragenter','dragover'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('over'); }));
+['dragleave','drop'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('over'); }));
+drop.addEventListener('drop', e => pick(e.dataTransfer.files[0]));
+$('#aCourse').onchange = () => fillGroups($('#aCourse').value);
+$('#aGroup').onchange = () => { $('#newGroupField').style.display = $('#aGroup').value==='__new' ? 'flex' : 'none'; };
+$('#upBtn').onclick = upload;
+$('#delBtn').onclick = doDelete;
+window.addEventListener('hashchange', () => route());
+
+// ---------- boot ----------
+(async () => {
+  try{
+    const r = await fetch('data.json?v=' + Date.now(), {cache:'no-store'});
+    DATA = await r.json();
+  }catch(e){
+    document.querySelector('main').innerHTML = '<div class="container"><div class="empty" style="margin-top:60px">Couldn’t load the file list. Refresh the page to try again.</div></div>';
+    return;
+  }
+  index();
+  if(location.hash==='#search') history.replaceState(null,'','#home');
+  route();
+})();
 </script>
 </body>
 </html>

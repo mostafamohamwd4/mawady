@@ -1,0 +1,1039 @@
+{
+ "courses": [
+  {
+   "id": "dcs",
+   "name": "Distributed Computer Systems",
+   "short": "DCS",
+   "groups": [
+    {
+     "id": "from-chats",
+     "title": "Study Packs",
+     "items": [
+      {
+       "t": "Assignments 1 & 2 · Model Answers",
+       "f": "files/dcs/ass-answers.pdf",
+       "pages": 30,
+       "mb": 0.5
+      }
+     ]
+    },
+    {
+     "id": "lectures",
+     "title": "Lectures",
+     "items": [
+      {
+       "t": "Ch1 · Introduction to Distributed Computing Systems",
+       "f": "files/dcs/ch1.pdf",
+       "pages": 90,
+       "mb": 3.0
+      },
+      {
+       "t": "Ch2 · Moving Technologies & DCS Types",
+       "f": "files/dcs/ch2.pdf",
+       "pages": 42,
+       "mb": 1.1
+      },
+      {
+       "t": "Ch3 · DCS Examples",
+       "f": "files/dcs/ch3.pdf",
+       "pages": 69,
+       "mb": 2.4
+      }
+     ]
+    },
+    {
+     "id": "sections",
+     "title": "Sections",
+     "items": [
+      {
+       "t": "Section 1",
+       "f": "files/dcs/sec1.pdf",
+       "pages": 2,
+       "mb": 0.3
+      },
+      {
+       "t": "Section 2",
+       "f": "files/dcs/sec2.pdf",
+       "pages": 2,
+       "mb": 0.3
+      },
+      {
+       "t": "Section 3",
+       "f": "files/dcs/sec3.pdf",
+       "pages": 3,
+       "mb": 0.3
+      }
+     ]
+    },
+    {
+     "id": "labs",
+     "title": "Labs",
+     "items": [
+      {
+       "t": "Lab 1",
+       "f": "files/dcs/lab1.pdf",
+       "pages": 3,
+       "mb": 0.2
+      },
+      {
+       "t": "Lab 2",
+       "f": "files/dcs/lab2.pdf",
+       "pages": 3,
+       "mb": 0.1
+      }
+     ]
+    },
+    {
+     "id": "assignments",
+     "title": "Assignments",
+     "items": [
+      {
+       "t": "Sheet 1 · Questions & Answers",
+       "f": "files/dcs/ass1.pdf",
+       "pages": 6,
+       "mb": 0.3
+      },
+      {
+       "t": "Assignment 2 · Word Version",
+       "f": "files/dcs/ass2.pdf",
+       "pages": 13,
+       "mb": 1.3
+      },
+      {
+       "t": "Assignment 1 · My Submission",
+       "f": "files/dcs/ass1-mine.pdf",
+       "pages": 11,
+       "mb": 0.9
+      },
+      {
+       "t": "Assignment 2 · My Submission",
+       "f": "files/dcs/ass2-mine.pdf",
+       "pages": 12,
+       "mb": 1.2
+      }
+     ]
+    }
+   ],
+   "code": "CMPN421",
+   "color": "#7dd3fc"
+  },
+  {
+   "id": "graphics",
+   "name": "Computer Graphics & Man-Machine Interface",
+   "short": "Graphics",
+   "groups": [
+    {
+     "id": "from-chats",
+     "title": "Study Packs",
+     "items": [
+      {
+       "t": "Study Guide · Lec 1–6 + Sec 1–7",
+       "f": "files/gfx/chat-study-guide.pdf",
+       "pages": 61,
+       "mb": 5.7
+      },
+      {
+       "t": "Practice Models · 10 Solved Midterms",
+       "f": "files/gfx/chat-practice-models.pdf",
+       "pages": 113,
+       "mb": 10.7
+      },
+      {
+       "t": "Quiz Bank · Moodle Quizzes with Answers",
+       "f": "files/gfx/chat-quiz-bank.pdf",
+       "pages": 23,
+       "mb": 2.1
+      },
+      {
+       "t": "Summary · Lec 1–6",
+       "f": "files/gfx/summary.pdf",
+       "pages": 48,
+       "mb": 5.3
+      },
+      {
+       "t": "Question Bank · Lec 1–6",
+       "f": "files/gfx/qbank.pdf",
+       "pages": 54,
+       "mb": 5.7
+      },
+      {
+       "t": "Task 1 · Code Explained Line by Line",
+       "f": "files/gfx/chat-task1-explained.pdf",
+       "pages": 8,
+       "mb": 0.8
+      },
+      {
+       "t": "Task 1 · Code & Output",
+       "f": "files/gfx/chat-task1.pdf",
+       "pages": 4,
+       "mb": 0.1
+      }
+     ]
+    },
+    {
+     "id": "lectures",
+     "title": "Lectures",
+     "items": [
+      {
+       "t": "Lecture 1",
+       "f": "files/gfx/lec1.pdf",
+       "pages": 27,
+       "mb": 1.6
+      },
+      {
+       "t": "Lecture 2",
+       "f": "files/gfx/lec2.pdf",
+       "pages": 40,
+       "mb": 2.1
+      },
+      {
+       "t": "Lecture 3",
+       "f": "files/gfx/lec3.pdf",
+       "pages": 28,
+       "mb": 1.9
+      },
+      {
+       "t": "Lecture 4",
+       "f": "files/gfx/lec4.pdf",
+       "pages": 37,
+       "mb": 1.9
+      },
+      {
+       "t": "Lecture 5",
+       "f": "files/gfx/lec5.pdf",
+       "pages": 27,
+       "mb": 1.6
+      },
+      {
+       "t": "Lecture 6",
+       "f": "files/gfx/lec6.pdf",
+       "pages": 43,
+       "mb": 2.0
+      }
+     ]
+    },
+    {
+     "id": "sections",
+     "title": "Sections & Sheets",
+     "items": [
+      {
+       "t": "Section 1 & 2",
+       "f": "files/gfx/sec1-2.pdf",
+       "pages": 4,
+       "mb": 0.6
+      },
+      {
+       "t": "Section 3",
+       "f": "files/gfx/sec3.pdf",
+       "pages": 2,
+       "mb": 0.5
+      },
+      {
+       "t": "Section 4",
+       "f": "files/gfx/sec4.pdf",
+       "pages": 2,
+       "mb": 0.2
+      },
+      {
+       "t": "Section 5",
+       "f": "files/gfx/sec5.pdf",
+       "pages": 2,
+       "mb": 0.3
+      },
+      {
+       "t": "Section 6",
+       "f": "files/gfx/sec6.pdf",
+       "pages": 3,
+       "mb": 0.9
+      },
+      {
+       "t": "Section 7",
+       "f": "files/gfx/sec7.pdf",
+       "pages": 3,
+       "mb": 0.3
+      },
+      {
+       "t": "Exercise Sheet 1",
+       "f": "files/gfx/sheet1.pdf",
+       "pages": 2,
+       "mb": 0.3
+      },
+      {
+       "t": "All Sections · Handwritten · Part 1",
+       "f": "files/gfx/allsec-p1.pdf",
+       "pages": 26,
+       "mb": 12.6
+      },
+      {
+       "t": "All Sections · Handwritten · Part 2",
+       "f": "files/gfx/allsec-p2.pdf",
+       "pages": 25,
+       "mb": 11.8
+      }
+     ]
+    },
+    {
+     "id": "old",
+     "title": "Previous Years",
+     "items": [
+      {
+       "t": "Sections up to Midterm · Handwritten",
+       "f": "files/gfx/old-sec-mt.pdf",
+       "pages": 16,
+       "mb": 6.5
+      },
+      {
+       "t": "Quizzes",
+       "f": "files/gfx/old-quizzes.pdf",
+       "pages": 39,
+       "mb": 2.5
+      },
+      {
+       "t": "Questions 1–4",
+       "f": "files/gfx/old-q1-4.pdf",
+       "pages": 12,
+       "mb": 0.1
+      },
+      {
+       "t": "Assignment 1",
+       "f": "files/gfx/old-ass1.pdf",
+       "pages": 3,
+       "mb": 0.2
+      },
+      {
+       "t": "Practical Exam",
+       "f": "files/gfx/old-practical.pdf",
+       "pages": 2,
+       "mb": 0.1
+      },
+      {
+       "t": "Handwritten Notes",
+       "f": "files/gfx/old-scan.pdf",
+       "pages": 8,
+       "mb": 2.8
+      },
+      {
+       "t": "Lecture Video Links",
+       "f": "files/gfx/links.pdf",
+       "pages": 1,
+       "mb": 0.1
+      }
+     ]
+    }
+   ],
+   "code": "CMPN322",
+   "color": "#c4b5fd"
+  },
+  {
+   "id": "dsp",
+   "name": "Digital Signal Processing",
+   "short": "DSP",
+   "groups": [
+    {
+     "id": "from-chats",
+     "title": "Study Packs",
+     "items": [
+      {
+       "t": "Ch1 · Theory (Night Mode)",
+       "f": "files/dsp/chat-ch1-theory-nm.pdf",
+       "pages": 33,
+       "mb": 2.0
+      },
+      {
+       "t": "Ch1 · Problems & Sheet 1 (Night Mode)",
+       "f": "files/dsp/chat-ch1-problems-nm.pdf",
+       "pages": 56,
+       "mb": 3.8
+      },
+      {
+       "t": "Ch2 · Theory (Night Mode)",
+       "f": "files/dsp/chat-ch2-theory-nm.pdf",
+       "pages": 20,
+       "mb": 1.4
+      },
+      {
+       "t": "Ch2 · Problems, Sheet 2 & Assignment (Night Mode)",
+       "f": "files/dsp/chat-ch2-problems-nm.pdf",
+       "pages": 61,
+       "mb": 3.0
+      },
+      {
+       "t": "Ch1 · Theory & Problems (v1)",
+       "f": "files/dsp/chat-ch1-tp.pdf",
+       "pages": 40,
+       "mb": 1.8
+      },
+      {
+       "t": "Ch1 · Sheet 1 Solution",
+       "f": "files/dsp/chat-ch1-sheet1.pdf",
+       "pages": 13,
+       "mb": 0.7
+      },
+      {
+       "t": "Ch2 · Theory & Problems (v1)",
+       "f": "files/dsp/chat-ch2-tp.pdf",
+       "pages": 48,
+       "mb": 1.6
+      },
+      {
+       "t": "Ch2 · Sheet 2 Solution",
+       "f": "files/dsp/chat-ch2-sheet2.pdf",
+       "pages": 14,
+       "mb": 0.7
+      },
+      {
+       "t": "Report · Discussion Prep",
+       "f": "files/dsp/chat-report-prep.pdf",
+       "pages": 88,
+       "mb": 3.4
+      },
+      {
+       "t": "Report · Line-by-Line Explanation",
+       "f": "files/dsp/chat-report-full.pdf",
+       "pages": 125,
+       "mb": 3.9
+      },
+      {
+       "t": "Report · Line-by-Line (Compact)",
+       "f": "files/dsp/chat-report-compact.pdf",
+       "pages": 68,
+       "mb": 2.6
+      }
+     ]
+    },
+    {
+     "id": "lectures",
+     "title": "Lectures · Ch1–Ch2",
+     "items": [
+      {
+       "t": "Lecture 1 · Introducing the Course",
+       "f": "files/dsp/lec1.pdf",
+       "pages": 21,
+       "mb": 1.6
+      },
+      {
+       "t": "Lecture 2 · Ch1",
+       "f": "files/dsp/lec2.pdf",
+       "pages": 29,
+       "mb": 2.3
+      },
+      {
+       "t": "Lecture 3 · Ch1",
+       "f": "files/dsp/lec3.pdf",
+       "pages": 26,
+       "mb": 1.9
+      },
+      {
+       "t": "Lecture 4 · Ch1",
+       "f": "files/dsp/lec4.pdf",
+       "pages": 49,
+       "mb": 4.7
+      },
+      {
+       "t": "Lecture 4-2 · Modified Solved Examples",
+       "f": "files/dsp/lec4-2.pdf",
+       "pages": 12,
+       "mb": 0.9
+      },
+      {
+       "t": "Lecture 5 · Ch2",
+       "f": "files/dsp/lec5.pdf",
+       "pages": 32,
+       "mb": 2.7
+      },
+      {
+       "t": "Lecture 6 · Ch2",
+       "f": "files/dsp/lec6.pdf",
+       "pages": 25,
+       "mb": 2.8
+      }
+     ]
+    },
+    {
+     "id": "lectures-later",
+     "title": "Lectures · Ch3–Ch5",
+     "items": [
+      {
+       "t": "Lecture 7 · Ch3",
+       "f": "files/dsp/lec7.pdf",
+       "pages": 69,
+       "mb": 4.1
+      },
+      {
+       "t": "Lecture 8 · Ch3",
+       "f": "files/dsp/lec8.pdf",
+       "pages": 62,
+       "mb": 3.1
+      },
+      {
+       "t": "Lecture 9 · Ch4 · Objectives",
+       "f": "files/dsp/lec9.pdf",
+       "pages": 51,
+       "mb": 2.7
+      },
+      {
+       "t": "Lecture 10-1 · Ch4 · Partial Fraction",
+       "f": "files/dsp/lec10-1.pdf",
+       "pages": 28,
+       "mb": 1.6
+      },
+      {
+       "t": "Lecture 10-2 · Ch4 · Residue",
+       "f": "files/dsp/lec10-2.pdf",
+       "pages": 33,
+       "mb": 2.0
+      },
+      {
+       "t": "Lecture 11 · Ch4 · Z-Transform Applications",
+       "f": "files/dsp/lec11.pdf",
+       "pages": 16,
+       "mb": 0.5
+      },
+      {
+       "t": "Chapter 5",
+       "f": "files/dsp/ch5.pdf",
+       "pages": 32,
+       "mb": 0.7
+      }
+     ]
+    },
+    {
+     "id": "sheets",
+     "title": "Sheets & Solutions",
+     "items": [
+      {
+       "t": "Sheet 1",
+       "f": "files/dsp/sheet1.pdf",
+       "pages": 2,
+       "mb": 0.2
+      },
+      {
+       "t": "Sheet 1 · Solved",
+       "f": "files/dsp/sheet1-sol.pdf",
+       "pages": 6,
+       "mb": 0.9
+      },
+      {
+       "t": "Sheet 2",
+       "f": "files/dsp/sheet2.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Sheet 2 · Solved",
+       "f": "files/dsp/sheet2-sol.pdf",
+       "pages": 2,
+       "mb": 0.3
+      },
+      {
+       "t": "Sheet 3",
+       "f": "files/dsp/sheet3.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Sheet 3 · Solved",
+       "f": "files/dsp/sheet3-sol.pdf",
+       "pages": 3,
+       "mb": 0.5
+      },
+      {
+       "t": "All Sheets · Solved",
+       "f": "files/dsp/sheets-all.pdf",
+       "pages": 19,
+       "mb": 4.7
+      },
+      {
+       "t": "Revision Sheet 1",
+       "f": "files/dsp/rev1.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Revision Sheet 2",
+       "f": "files/dsp/rev2.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Ch5 · Revision Problems",
+       "f": "files/dsp/rev-ch5.pdf",
+       "pages": 1,
+       "mb": 0.1
+      }
+     ]
+    },
+    {
+     "id": "sections",
+     "title": "TA Sections",
+     "items": [
+      {
+       "t": "Eng. Khalaf · Solving Guide",
+       "f": "files/dsp/khalaf-guide.pdf",
+       "pages": 6,
+       "mb": 2.3
+      },
+      {
+       "t": "Eng. Khalaf · Theory",
+       "f": "files/dsp/khalaf-theory.pdf",
+       "pages": 16,
+       "mb": 5.3
+      },
+      {
+       "t": "Eng. Khalaf · Sheet 1 Key Points",
+       "f": "files/dsp/khalaf-important.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Eng. Loka · Ch1 Section 2024",
+       "f": "files/dsp/loka-ch1.pdf",
+       "pages": 26,
+       "mb": 5.7
+      },
+      {
+       "t": "Eng. Loka · Ch1 Theory",
+       "f": "files/dsp/loka-ch1-theory.pdf",
+       "pages": 8,
+       "mb": 1.3
+      },
+      {
+       "t": "Eng. Loka · FFT",
+       "f": "files/dsp/loka-fft.pdf",
+       "pages": 6,
+       "mb": 0.6
+      },
+      {
+       "t": "Eng. Loka · Convolution",
+       "f": "files/dsp/loka-conv.pdf",
+       "pages": 7,
+       "mb": 1.1
+      },
+      {
+       "t": "Eng. Loka · Correlation",
+       "f": "files/dsp/loka-corr.pdf",
+       "pages": 6,
+       "mb": 0.9
+      },
+      {
+       "t": "Eng. Loka · Z-Transform Part 1",
+       "f": "files/dsp/loka-z.pdf",
+       "pages": 7,
+       "mb": 2.1
+      },
+      {
+       "t": "Eng. Loka · Residue Solution",
+       "f": "files/dsp/loka-residue.pdf",
+       "pages": 3,
+       "mb": 0.3
+      },
+      {
+       "t": "Eng. Loka · Chapter 5",
+       "f": "files/dsp/loka-ch5.pdf",
+       "pages": 4,
+       "mb": 0.3
+      },
+      {
+       "t": "Section · Ch5",
+       "f": "files/dsp/sec-ch5.pdf",
+       "pages": 8,
+       "mb": 0.9
+      }
+     ]
+    },
+    {
+     "id": "midterms",
+     "title": "Midterms & Quizzes",
+     "items": [
+      {
+       "t": "Midterm · 12-11-2025",
+       "f": "files/dsp/mid-2025-11.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Midterm · 26-7-2026",
+       "f": "files/dsp/mid-2026-07.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Midterm · 31-7-2023",
+       "f": "files/dsp/mid-2023-07.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Midterm · 28-11-2021",
+       "f": "files/dsp/mid-2021-11.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Midterm · 8-12-2020",
+       "f": "files/dsp/mid-2020-12.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Midterm · 14-11-2019 · Solved",
+       "f": "files/dsp/mid-2019-11.pdf",
+       "pages": 1,
+       "mb": 0.2
+      },
+      {
+       "t": "Midterm 1",
+       "f": "files/dsp/mid-1.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Midterm 2",
+       "f": "files/dsp/mid-2.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Midterm · Old",
+       "f": "files/dsp/mid-old.pdf",
+       "pages": 16,
+       "mb": 0.9
+      },
+      {
+       "t": "Quiz 1",
+       "f": "files/dsp/quiz1.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Quiz 2 · Summer 2026",
+       "f": "files/dsp/quiz2.pdf",
+       "pages": 5,
+       "mb": 0.3
+      }
+     ]
+    },
+    {
+     "id": "finals",
+     "title": "Final Exams",
+     "items": [
+      {
+       "t": "Final · 17-8-2026",
+       "f": "files/dsp/fin-2026-08.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Final · 9-6-2026",
+       "f": "files/dsp/fin-2026-06.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Final · 20-1-2025",
+       "f": "files/dsp/fin-2025-01.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Final 2025 · Residue Problem Solution",
+       "f": "files/dsp/fin-2025-residue.pdf",
+       "pages": 5,
+       "mb": 2.7
+      },
+      {
+       "t": "Final · 18-1-2024",
+       "f": "files/dsp/fin-2024-01.pdf",
+       "pages": 1,
+       "mb": 0.2
+      },
+      {
+       "t": "Final · 11-6-2023",
+       "f": "files/dsp/fin-2023-06b.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Final · 7-6-2023",
+       "f": "files/dsp/fin-2023-06a.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Final · 23-1-2023",
+       "f": "files/dsp/fin-2023-01.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Final · 8-9-2021",
+       "f": "files/dsp/fin-2021-09.pdf",
+       "pages": 11,
+       "mb": 2.3
+      },
+      {
+       "t": "Final · 27-6-2021",
+       "f": "files/dsp/fin-2021-06.pdf",
+       "pages": 10,
+       "mb": 2.1
+      },
+      {
+       "t": "Final · 4-3-2021",
+       "f": "files/dsp/fin-2021-03.pdf",
+       "pages": 9,
+       "mb": 2.2
+      },
+      {
+       "t": "Final · 28-12-2019",
+       "f": "files/dsp/fin-2019-12.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Final · 12-1-2019",
+       "f": "files/dsp/fin-2019-01.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Final · 23-12-2017",
+       "f": "files/dsp/fin-2017-12.pdf",
+       "pages": 2,
+       "mb": 0.2
+      },
+      {
+       "t": "Final · 2-1-2017",
+       "f": "files/dsp/fin-2017-01.pdf",
+       "pages": 2,
+       "mb": 0.1
+      }
+     ]
+    },
+    {
+     "id": "notes",
+     "title": "Notes & Summaries",
+     "items": [
+      {
+       "t": "DSP Student Notebook",
+       "f": "files/dsp/notebook.pdf",
+       "pages": 22,
+       "mb": 5.4
+      },
+      {
+       "t": "DSP Theory Notes",
+       "f": "files/dsp/nazary.pdf",
+       "pages": 14,
+       "mb": 4.6
+      },
+      {
+       "t": "Theory · Midterm",
+       "f": "files/dsp/theory-mid.pdf",
+       "pages": 5,
+       "mb": 0.4
+      },
+      {
+       "t": "Theory · Final",
+       "f": "files/dsp/theory-final.pdf",
+       "pages": 6,
+       "mb": 0.9
+      },
+      {
+       "t": "DSP Sections · Problems",
+       "f": "files/dsp/sections-problems.pdf",
+       "pages": 49,
+       "mb": 17.4
+      },
+      {
+       "t": "Eng. Basma · DSP",
+       "f": "files/dsp/basma.pdf",
+       "pages": 46,
+       "mb": 13.1
+      },
+      {
+       "t": "Quiz 1 · With Answers",
+       "f": "files/dsp/quiz1-hand.pdf",
+       "pages": 8,
+       "mb": 1.1
+      },
+      {
+       "t": "Ch5 · Video Notes",
+       "f": "files/dsp/ch5-video.pdf",
+       "pages": 11,
+       "mb": 0.4
+      },
+      {
+       "t": "Last Chapter Notes",
+       "f": "files/dsp/last-chapter.pdf",
+       "pages": 4,
+       "mb": 0.5
+      },
+      {
+       "t": "DSP Submission",
+       "f": "files/dsp/taslima.pdf",
+       "pages": 4,
+       "mb": 0.8
+      }
+     ]
+    },
+    {
+     "id": "book",
+     "title": "Textbook & Questions",
+     "items": [
+      {
+       "t": "DSP ELC 422 · Theoretical Part",
+       "f": "files/dsp/book.pdf",
+       "pages": 194,
+       "mb": 4.4
+      },
+      {
+       "t": "Book Questions · Ch1",
+       "f": "files/dsp/book-q1.pdf",
+       "pages": 4,
+       "mb": 0.2
+      },
+      {
+       "t": "Book Questions · Ch2",
+       "f": "files/dsp/book-q2.pdf",
+       "pages": 3,
+       "mb": 0.1
+      },
+      {
+       "t": "Book Questions · Ch3",
+       "f": "files/dsp/book-q3.pdf",
+       "pages": 3,
+       "mb": 0.2
+      },
+      {
+       "t": "Book Questions · Ch4",
+       "f": "files/dsp/book-q4.pdf",
+       "pages": 6,
+       "mb": 0.2
+      },
+      {
+       "t": "Book Questions · Ch5",
+       "f": "files/dsp/book-q5.pdf",
+       "pages": 3,
+       "mb": 0.2
+      },
+      {
+       "t": "Old Exams from the Book",
+       "f": "files/dsp/book-exams.pdf",
+       "pages": 4,
+       "mb": 0.3
+      }
+     ]
+    },
+    {
+     "id": "lab",
+     "title": "Lab",
+     "items": [
+      {
+       "t": "Lab DSP",
+       "f": "files/dsp/lab.pdf",
+       "pages": 9,
+       "mb": 2.8
+      },
+      {
+       "t": "EX1 · My Lab Report",
+       "f": "files/dsp/lab-ex1-mine.pdf",
+       "pages": 7,
+       "mb": 0.5
+      },
+      {
+       "t": "EX2 · My Lab Report",
+       "f": "files/dsp/lab-ex2-mine.pdf",
+       "pages": 3,
+       "mb": 0.2
+      },
+      {
+       "t": "Report 1 · Digital Waveforms Generation",
+       "f": "files/dsp/lab-r1.pdf",
+       "pages": 1,
+       "mb": 0.8
+      },
+      {
+       "t": "Report 2 · FFT",
+       "f": "files/dsp/lab-r2.pdf",
+       "pages": 1,
+       "mb": 0.6
+      },
+      {
+       "t": "Report 3 · Convolution",
+       "f": "files/dsp/lab-r3.pdf",
+       "pages": 1,
+       "mb": 0.8
+      },
+      {
+       "t": "Report 4 · Digital Filters",
+       "f": "files/dsp/lab-r4.pdf",
+       "pages": 1,
+       "mb": 0.9
+      }
+     ]
+    },
+    {
+     "id": "report",
+     "title": "Report & Mini Project",
+     "items": [
+      {
+       "t": "Lecture Report · My Submission",
+       "f": "files/dsp/lec-report.pdf",
+       "pages": 29,
+       "mb": 1.1
+      },
+      {
+       "t": "Mini Project · Adaptive Channel Equalizer",
+       "f": "files/dsp/mini.pdf",
+       "pages": 15,
+       "mb": 1.0
+      },
+      {
+       "t": "Mini Project · Code & Figures",
+       "f": "files/dsp/mini-code.pdf",
+       "pages": 4,
+       "mb": 0.6
+      },
+      {
+       "t": "Mini Project · Instructions",
+       "f": "files/dsp/mini-inst.pdf",
+       "pages": 3,
+       "mb": 0.4
+      }
+     ]
+    },
+    {
+     "id": "links",
+     "title": "Video Links",
+     "items": [
+      {
+       "t": "Lecture Video Links",
+       "f": "files/dsp/links-lec.pdf",
+       "pages": 1,
+       "mb": 0.0
+      },
+      {
+       "t": "Section Video Links",
+       "f": "files/dsp/links-sec.pdf",
+       "pages": 1,
+       "mb": 0.1
+      },
+      {
+       "t": "Eng. Khalaf Video Links",
+       "f": "files/dsp/links-khalaf.pdf",
+       "pages": 1,
+       "mb": 0.0
+      },
+      {
+       "t": "Lab Video Links",
+       "f": "files/dsp/links-lab.pdf",
+       "pages": 1,
+       "mb": 0.0
+      }
+     ]
+    }
+   ],
+   "code": "ELCn425",
+   "color": "#fcd34d"
+  }
+ ]
+}
