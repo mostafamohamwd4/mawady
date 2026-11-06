@@ -352,12 +352,6 @@
        "mb": 0.7
       },
       {
-       "t": "Report · Line-by-Line Explanation",
-       "f": "files/dsp/chat-report-full.pdf",
-       "pages": 125,
-       "mb": 3.9
-      },
-      {
        "t": "Report · Line-by-Line (Compact)",
        "f": "files/dsp/chat-report-compact.pdf",
        "pages": 68,
