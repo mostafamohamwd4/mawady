@@ -986,6 +986,111 @@
    ],
    "code": "ELCn425",
    "color": "#fcd34d"
+  },
+  {
+   "id": "laws",
+   "name": "Engineering Laws & Professional Ethics",
+   "short": "Laws",
+   "code": "ENGn312c",
+   "color": "#f9a8d4",
+   "groups": [
+    {
+     "id": "lectures",
+     "title": "Lectures",
+     "items": [
+      {
+       "t": "Lecture 1",
+       "f": "files/laws/lec1.pdf",
+       "pages": 6,
+       "mb": 0.6,
+       "added": 1793994132119
+      },
+      {
+       "t": "Lecture 2",
+       "f": "files/laws/lec2.pdf",
+       "pages": 6,
+       "mb": 0.7,
+       "added": 1793994132124
+      },
+      {
+       "t": "Lecture 3",
+       "f": "files/laws/lec3.pdf",
+       "pages": 5,
+       "mb": 0.5,
+       "added": 1793994132128
+      },
+      {
+       "t": "Lecture 4",
+       "f": "files/laws/lec4.pdf",
+       "pages": 9,
+       "mb": 0.8,
+       "added": 1793994132132
+      },
+      {
+       "t": "Lecture 5",
+       "f": "files/laws/lec5.pdf",
+       "pages": 7,
+       "mb": 0.7,
+       "added": 1793994132136
+      },
+      {
+       "t": "Lecture 6",
+       "f": "files/laws/lec6.pdf",
+       "pages": 6,
+       "mb": 0.5,
+       "added": 1793994132140
+      },
+      {
+       "t": "Lecture 7",
+       "f": "files/laws/lec7.pdf",
+       "pages": 9,
+       "mb": 0.8,
+       "added": 1793994132144
+      },
+      {
+       "t": "Lecture 8",
+       "f": "files/laws/lec8.pdf",
+       "pages": 6,
+       "mb": 0.5,
+       "added": 1793994132147
+      },
+      {
+       "t": "Lecture 9",
+       "f": "files/laws/lec9.pdf",
+       "pages": 6,
+       "mb": 0.6,
+       "added": 1793994132151
+      },
+      {
+       "t": "Lecture 10",
+       "f": "files/laws/lec10.pdf",
+       "pages": 5,
+       "mb": 0.5,
+       "added": 1793994132155
+      },
+      {
+       "t": "Lecture 11",
+       "f": "files/laws/lec11.pdf",
+       "pages": 9,
+       "mb": 0.9,
+       "added": 1793994132159
+      }
+     ]
+    },
+    {
+     "id": "sheets",
+     "title": "Sheets",
+     "items": [
+      {
+       "t": "Midterm Sheet",
+       "f": "files/laws/midterm-sheet.pdf",
+       "pages": 8,
+       "mb": 0.4,
+       "added": 1793994132165
+      }
+     ]
+    }
+   ]
   }
  ]
 }
