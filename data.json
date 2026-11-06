@@ -25,7 +25,7 @@
        "t": "Ch1 · Introduction to Distributed Computing Systems",
        "f": "files/dcs/ch1.pdf",
        "pages": 90,
-       "mb": 3.0
+       "mb": 3
       },
       {
        "t": "Ch2 · Moving Technologies & DCS Types",
@@ -151,12 +151,6 @@
        "mb": 5.3
       },
       {
-       "t": "Question Bank · Lec 1–6",
-       "f": "files/gfx/qbank.pdf",
-       "pages": 54,
-       "mb": 5.7
-      },
-      {
        "t": "Task 1 · Code Explained Line by Line",
        "f": "files/gfx/chat-task1-explained.pdf",
        "pages": 8,
@@ -208,7 +202,7 @@
        "t": "Lecture 6",
        "f": "files/gfx/lec6.pdf",
        "pages": 43,
-       "mb": 2.0
+       "mb": 2
       }
      ]
     },
@@ -337,7 +331,7 @@
        "t": "Ch1 · Theory (Night Mode)",
        "f": "files/dsp/chat-ch1-theory-nm.pdf",
        "pages": 33,
-       "mb": 2.0
+       "mb": 2
       },
       {
        "t": "Ch1 · Problems & Sheet 1 (Night Mode)",
@@ -355,7 +349,7 @@
        "t": "Ch2 · Problems, Sheet 2 & Assignment (Night Mode)",
        "f": "files/dsp/chat-ch2-problems-nm.pdf",
        "pages": 61,
-       "mb": 3.0
+       "mb": 3
       },
       {
        "t": "Ch1 · Theory & Problems (v1)",
@@ -481,7 +475,7 @@
        "t": "Lecture 10-2 · Ch4 · Residue",
        "f": "files/dsp/lec10-2.pdf",
        "pages": 33,
-       "mb": 2.0
+       "mb": 2
       },
       {
        "t": "Lecture 11 · Ch4 · Z-Transform Applications",
@@ -985,7 +979,7 @@
        "t": "Mini Project · Adaptive Channel Equalizer",
        "f": "files/dsp/mini.pdf",
        "pages": 15,
-       "mb": 1.0
+       "mb": 1
       },
       {
        "t": "Mini Project · Code & Figures",
@@ -1009,7 +1003,7 @@
        "t": "Lecture Video Links",
        "f": "files/dsp/links-lec.pdf",
        "pages": 1,
-       "mb": 0.0
+       "mb": 0
       },
       {
        "t": "Section Video Links",
@@ -1021,13 +1015,13 @@
        "t": "Eng. Khalaf Video Links",
        "f": "files/dsp/links-khalaf.pdf",
        "pages": 1,
-       "mb": 0.0
+       "mb": 0
       },
       {
        "t": "Lab Video Links",
        "f": "files/dsp/links-lab.pdf",
        "pages": 1,
-       "mb": 0.0
+       "mb": 0
       }
      ]
     }
