@@ -1102,6 +1102,27 @@
      "title": "Midterms",
      "items": [
       {
+       "t": "Midterm · 12-11-2025",
+       "f": "files/laws/mid-2025-11-12.pdf",
+       "pages": 1,
+       "mb": 0.2,
+       "added": 1793995237179
+      },
+      {
+       "t": "Midterm · 10-11-2025 (GEN 352)",
+       "f": "files/laws/mid-2025-11-10-gen352.pdf",
+       "pages": 1,
+       "mb": 0.1,
+       "added": 1793995237185
+      },
+      {
+       "t": "Midterm · 11-11-2024 (ENGn312e)",
+       "f": "files/laws/mid-2024-11-11-engn312e.pdf",
+       "pages": 1,
+       "mb": 0.1,
+       "added": 1793995237190
+      },
+      {
        "t": "Midterm · 12-11-2024",
        "f": "files/laws/mid-2024-11-12.pdf",
        "pages": 1,
