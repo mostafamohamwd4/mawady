@@ -306,13 +306,13 @@ async function openFile(f){
 async function layout(my){
   const first = await doc.getPage(1);
   const vp1 = first.getViewport({scale:1});
-  const avail = Math.min(pagesEl.clientWidth - 20, 1000);
+  const avail = Math.min(pagesEl.clientWidth - 32, 1000);
   const base = avail / vp1.width;
   pagesEl.innerHTML = '';
   if(observer) observer.disconnect();
   observer = new IntersectionObserver(entries => entries.forEach(e => {
     const el = e.target, n = +el.dataset.n;
-    if(e.isIntersecting){ draw(el, n, base*scale, my); $('#pg').textContent = `${n} / ${doc.numPages}`; }
+    if(e.isIntersecting){ draw(el, n, base*scale, my); }
   }), {root: pagesEl, rootMargin: '600px 0px'});
   for(let n=1; n<=doc.numPages; n++){
     const el = document.createElement('div');
@@ -361,6 +361,13 @@ $('#q').addEventListener('input', () => {
   else if(lastRoute==='search') location.hash = prevRoute;
 });
 $('#close').onclick = () => closeViewer(false);
+pagesEl.addEventListener('scroll', () => {
+  if(!doc) return;
+  const mid = pagesEl.scrollTop + pagesEl.clientHeight/2;
+  let n = 1;
+  for(const el of pagesEl.children){ if(el.offsetTop <= mid) n = +el.dataset.n || n; else break; }
+  $('#pg').textContent = `${n} / ${doc.numPages}`;
+}, {passive:true});
 $('#zin').onclick = () => zoom(1.25);
 $('#zout').onclick = () => zoom(0.8);
 window.addEventListener('hashchange', route);
