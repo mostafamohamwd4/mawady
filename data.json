@@ -1087,6 +1087,67 @@
        "pages": 8,
        "mb": 0.4,
        "added": 1793994132165
+      },
+      {
+       "t": "Question Bank 2025",
+       "f": "files/laws/question-bank-2025.pdf",
+       "pages": 16,
+       "mb": 0.6,
+       "added": 1793994542809
+      }
+     ]
+    },
+    {
+     "id": "midterms",
+     "title": "Midterms",
+     "items": [
+      {
+       "t": "Midterm · 12-11-2024",
+       "f": "files/laws/mid-2024-11-12.pdf",
+       "pages": 1,
+       "mb": 0.1,
+       "added": 1793994542813
+      },
+      {
+       "t": "Midterm · 11-2024 (Law 2018)",
+       "f": "files/laws/mid-2024-11-law2018.pdf",
+       "pages": 1,
+       "mb": 0.0,
+       "added": 1793994542817
+      }
+     ]
+    },
+    {
+     "id": "finals",
+     "title": "Final Exams",
+     "items": [
+      {
+       "t": "Final · 21-1-2025",
+       "f": "files/laws/fin-2025-01-21.pdf",
+       "pages": 1,
+       "mb": 1.8,
+       "added": 1793994542821
+      },
+      {
+       "t": "Final · 20-1-2025",
+       "f": "files/laws/fin-2025-01-20.pdf",
+       "pages": 1,
+       "mb": 0.0,
+       "added": 1793994542825
+      },
+      {
+       "t": "Final · 12-1-2025",
+       "f": "files/laws/fin-2025-01-12.pdf",
+       "pages": 1,
+       "mb": 0.2,
+       "added": 1793994542829
+      },
+      {
+       "t": "Final · 2-1-2025",
+       "f": "files/laws/fin-2025-01-02.pdf",
+       "pages": 1,
+       "mb": 0.1,
+       "added": 1793994542833
       }
      ]
     }
