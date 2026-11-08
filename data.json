@@ -10,6 +10,13 @@
      "title": "Study Packs",
      "items": [
       {
+       "t": "Midterm · Top 20 Questions",
+       "f": "files/dcs/midterm-top-questions.pdf",
+       "pages": 20,
+       "mb": 0.4,
+       "added": 1794100065734
+      },
+      {
        "t": "Assignments 1 & 2 · Model Answers",
        "f": "files/dcs/ass-answers.pdf",
        "pages": 30,
@@ -62,6 +69,13 @@
        "f": "files/dcs/sec3.pdf",
        "pages": 3,
        "mb": 0.3
+      },
+      {
+       "t": "Section 4",
+       "f": "files/dcs/sec4.pdf",
+       "pages": 2,
+       "mb": 0.2,
+       "added": 1794100065739
       }
      ]
     },
