@@ -1009,6 +1009,19 @@
    "color": "#f9a8d4",
    "groups": [
     {
+     "id": "from-chats",
+     "title": "Study Packs",
+     "items": [
+      {
+       "t": "Midterm Summary",
+       "f": "files/laws/midterm-summary.pdf",
+       "pages": 17,
+       "mb": 0.6,
+       "added": 1794167689367
+      }
+     ]
+    },
+    {
      "id": "lectures",
      "title": "Lectures",
      "items": [
