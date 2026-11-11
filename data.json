@@ -157,7 +157,7 @@
        "t": "Drawing Code · Your Method",
        "f": "files/gfx/drawing-code-method.pdf",
        "pages": 23,
-       "mb": 2.0,
+       "mb": 2,
        "added": 1794269360450
       },
       {
@@ -363,12 +363,6 @@
        "pages": 75,
        "mb": 3.8,
        "added": 1794357060926
-      },
-      {
-       "t": "Ch1 · Theory (Night Mode)",
-       "f": "files/dsp/chat-ch1-theory-nm.pdf",
-       "pages": 33,
-       "mb": 2
       },
       {
        "t": "Ch1 · Problems & Sheet 1 (Night Mode)",
