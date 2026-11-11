@@ -351,6 +351,20 @@
      "title": "Study Packs",
      "items": [
       {
+       "t": "Ch1 · Complete Pack (Theory + Problems + Sheet 1)",
+       "f": "files/dsp/ch1-complete.pdf",
+       "pages": 72,
+       "mb": 4.5,
+       "added": 1794357060919
+      },
+      {
+       "t": "Ch2 · Complete Pack (DFT & FFT + Sheet 2 + Assignment)",
+       "f": "files/dsp/ch2-complete.pdf",
+       "pages": 75,
+       "mb": 3.8,
+       "added": 1794357060926
+      },
+      {
        "t": "Ch1 · Theory (Night Mode)",
        "f": "files/dsp/chat-ch1-theory-nm.pdf",
        "pages": 33,
